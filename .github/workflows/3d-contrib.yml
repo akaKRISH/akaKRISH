@@ -25,8 +25,11 @@ jobs:
         run: |
           mkdir -p assets/3d
           cp profile-3d-contrib/profile-night-green.svg assets/3d/profile-night-green.svg
+          cp profile-3d-contrib/profile-night-view.svg assets/3d/profile-night-view.svg
+          cp profile-3d-contrib/profile-night-rainbow.svg assets/3d/profile-night-rainbow.svg
           cp profile-3d-contrib/profile-green.svg assets/3d/profile-green.svg
           cp profile-3d-contrib/profile-green-animate.svg assets/3d/profile-green-animate.svg
+          cp profile-3d-contrib/profile-gitblock.svg assets/3d/profile-gitblock.svg
           rm -rf profile-3d-contrib
 
       - name: Commit generated assets

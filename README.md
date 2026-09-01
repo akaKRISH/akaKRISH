@@ -6,9 +6,11 @@
 
 <br>
 
-<a href="https://github.com/akaKRISH">
-  <img src="assets/ascii/ruru-boot.svg" alt="RURU colored ASCII terminal portrait" width="760" />
-</a>
+<img
+  src="assets/ascii/ruru-laser-print.gif"
+  alt="Ruru colored ASCII portrait being laser printed"
+  width="900"
+/>
 
 <br><br>
 
@@ -25,28 +27,12 @@
 <p align="center">
   <a href="https://github.com/akaKRISH"><img src="https://img.shields.io/badge/GITHUB-111827?style=flat-square&logo=github&logoColor=78c4ff" alt="GitHub" /></a>
   &nbsp;
-  <a href="https://github.com/akaKRISH/GestureOS"><img src="https://img.shields.io/badge/FLAGSHIP_·_GESTURE_OS-0b1220?style=flat-square&logo=googlelens&logoColor=78c4ff" alt="Gesture OS" /></a>
+  <a href="https://github.com/akaKRISH/GestureOS"><img src="https://img.shields.io/badge/GESTURE_OS-0b1220?style=flat-square&logo=googlelens&logoColor=78c4ff" alt="Gesture OS" /></a>
   &nbsp;
-  <a href="https://github.com/akaKRISH/ruru-portfolio"><img src="https://img.shields.io/badge/LAB_·_PORTFOLIO-0b1220?style=flat-square&logo=visualstudiocode&logoColor=9b8cff" alt="Portfolio" /></a>
-  &nbsp;
-  <a href="https://akakrish.github.io/akaKRISH/interactive/"><img src="https://img.shields.io/badge/3D_INTERACTIVE_LAB-0b1220?style=flat-square&logo=three.js&logoColor=22c55e" alt="3D Lab" /></a>
+  <a href="https://akakrish.github.io/akaKRISH/interactive/"><img src="https://img.shields.io/badge/3D_LAB-0b1220?style=flat-square&logo=three.js&logoColor=9b8cff" alt="3D Lab" /></a>
 </p>
 
 </div>
-
-<br><br>
-
----
-
-<br>
-
-## /about
-
-I am an engineering student focused on **intelligent interfaces, software systems, computer vision, and applied AI**.
-
-I learn through intentional building: creating prototypes, developer tools, spatial interaction systems, and experiments that force me to understand how computing systems operate from first principles.
-
-> **Learn deeply. Build boldly. Think beyond the obvious.**
 
 <br><br>
 
@@ -90,13 +76,13 @@ I learn through intentional building: creating prototypes, developer tools, spat
 
 **GestureOS** transforms standard webcam feeds into a responsive, touchless desktop interaction layer. Built with on-device computer vision and low-latency event dispatching, it enables spatial navigation without proprietary hardware.
 
-### 📐 Perception & Architecture
+### Perception & Architecture
 * **Perception Layer:** 21 3D Hand Landmarks, 468 Face Mesh Points, 6-DoF Head Pose estimation via PnP, and 1€ Temporal Jitter Filtering.
 * **Multimodal Fusion:** Real-time geometric and dynamic classification with velocity vectors and pinch metrics.
 * **Safety State Machine:** Face-presence verification, dwell-time confirmation, and fail-safe emergency disengage triggers.
 * **Dispatch Engine:** Native OS input injection (Mouse/Keyboard), HUD overlay system, and sandboxed plugin architecture.
 
-### ⚡ Core Capabilities
+### Core Capabilities
 * **25+ Gesture Vocabulary:** Precision pointing, pinch-drag, inertial scroll, window management, media controls, and macro triggers.
 * **AirMouse:** Inertial cursor control with dynamic sensitivity damping for pixel-accurate targeting.
 * **Privacy-First:** 100% on-device vision inference — zero video frames or telemetry leave the local machine.
@@ -106,7 +92,7 @@ I learn through intentional building: creating prototypes, developer tools, spat
 
 <div align="center">
 
-👉 [**Explore the GestureOS Repository & Architecture on GitHub →**](https://github.com/akaKRISH/GestureOS)
+[**Explore the GestureOS Repository & Architecture on GitHub →**](https://github.com/akaKRISH/GestureOS)
 
 </div>
 
@@ -157,12 +143,34 @@ I learn through intentional building: creating prototypes, developer tools, spat
 
 <br>
 
+## /engineering-journey
+
+I am an engineering student focused on **intelligent interfaces, software systems, computer vision, and applied AI**.
+
+I learn through intentional building: creating prototypes, developer tools, spatial interaction systems, and experiments that force me to understand how computing systems operate from first principles.
+
+> **Learn deeply. Build boldly. Think beyond the obvious.**
+
+<br><br>
+
+---
+
+<br>
+
 ## /activity
 
 <div align="center">
 
 <a href="https://github.com/akaKRISH">
-  <img src="https://github-readme-stats.vercel.app/api?username=akaKRISH&show_icons=true&hide_border=true&bg_color=05070B&title_color=78C4FF&text_color=94A3B8&icon_color=9B8CFF&rank_icon=github&border_color=1B2638" alt="GitHub Statistics" />
+  <picture>
+    <img src="assets/activity/github-overview.svg" alt="GitHub Overview" />
+  </picture>
+</a>
+&nbsp;&nbsp;
+<a href="https://github.com/akaKRISH">
+  <picture>
+    <img src="assets/activity/github-languages.svg" alt="Language Distribution" />
+  </picture>
 </a>
 
 </div>
@@ -221,7 +229,7 @@ I learn through intentional building: creating prototypes, developer tools, spat
 
 <br>
 
-[GitHub](https://github.com/akaKRISH) &nbsp;·&nbsp; [GestureOS](https://github.com/akaKRISH/GestureOS) &nbsp;·&nbsp; [RuruOS](https://github.com/akaKRISH/RuruOS) &nbsp;·&nbsp; [Portfolio](https://github.com/akaKRISH/ruru-portfolio) &nbsp;·&nbsp; [Interactive Lab](https://akakrish.github.io/akaKRISH/interactive/)
+[GitHub](https://github.com/akaKRISH) &nbsp;·&nbsp; [GestureOS](https://github.com/akaKRISH/GestureOS) &nbsp;·&nbsp; [RuruOS](https://github.com/akaKRISH/RuruOS) &nbsp;·&nbsp; [Interactive Lab](https://akakrish.github.io/akaKRISH/interactive/)
 
 <br><br>
 
