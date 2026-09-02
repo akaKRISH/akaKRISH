@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="100" viewBox="0 0 420 100">
-<rect width="420" height="100" rx="12" fill="#0F1729" stroke="#1B2638" stroke-width="1"/>
-<text x="210" y="45" fill="#78C4FF" font-family="Consolas,monospace" font-size="14" text-anchor="middle" font-weight="600">@akaKRISH</text>
-<text x="210" y="70" fill="#94A3B8" font-family="Consolas,monospace" font-size="11" text-anchor="middle">github.com/akaKRISH</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="270" viewBox="0 0 420 270">
+<rect width="420" height="270" rx="12" fill="#0F1729" stroke="#1B2638" stroke-width="1"/>
+<text x="24" y="36" fill="#78C4FF" font-family="Consolas,monospace" font-size="14" font-weight="600">GITHUB OVERVIEW</text>
+<text x="396" y="36" fill="#94A3B8" font-family="Consolas,monospace" font-size="11" text-anchor="end">@akaKRISH</text>
+<line x1="24" y1="46" x2="396" y2="46" stroke="#1B2638" stroke-width="1"/>
+<text x="24" y="58" fill="#94A3B8" font-family="Consolas,monospace" font-size="12">Total Contributions</text>
+<text x="396" y="58" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12" text-anchor="end" font-weight="600">93</text>
+<text x="24" y="86" fill="#94A3B8" font-family="Consolas,monospace" font-size="12">Commits (this year)</text>
+<text x="396" y="86" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12" text-anchor="end" font-weight="600">67</text>
+<text x="24" y="114" fill="#94A3B8" font-family="Consolas,monospace" font-size="12">Pull Requests</text>
+<text x="396" y="114" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12" text-anchor="end" font-weight="600">2</text>
+<text x="24" y="142" fill="#94A3B8" font-family="Consolas,monospace" font-size="12">Issues</text>
+<text x="396" y="142" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12" text-anchor="end" font-weight="600">0</text>
+<text x="24" y="170" fill="#94A3B8" font-family="Consolas,monospace" font-size="12">Public Repos</text>
+<text x="396" y="170" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12" text-anchor="end" font-weight="600">10</text>
+<text x="24" y="198" fill="#94A3B8" font-family="Consolas,monospace" font-size="12">Stars Earned</text>
+<text x="396" y="198" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12" text-anchor="end" font-weight="600">2</text>
+<text x="24" y="226" fill="#94A3B8" font-family="Consolas,monospace" font-size="12">Followers</text>
+<text x="396" y="226" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12" text-anchor="end" font-weight="600">1</text>
 </svg>
