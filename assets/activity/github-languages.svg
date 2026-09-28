@@ -5,25 +5,25 @@
 <line x1="24" y1="46" x2="396" y2="46" stroke="#1B2638" stroke-width="1"/>
 <clipPath id="bar-clip"><rect x="24" y="58" width="372" height="12" rx="6"/></clipPath>
 <g clip-path="url(#bar-clip)">
-<rect x="24" y="58" width="151.77599999999998" height="12" fill="#3572A5"/>
-<rect x="175.77599999999998" y="58" width="116.064" height="12" fill="#3178c6"/>
-<rect x="291.84" y="58" width="52.452" height="12" fill="#e34c26"/>
-<rect x="344.292" y="58" width="30.131999999999998" height="12" fill="#663399"/>
-<rect x="374.424" y="58" width="19.715999999999998" height="12" fill="#f1e05a"/>
+<rect x="24" y="58" width="150.28799999999998" height="12" fill="#3178c6"/>
+<rect x="174.28799999999998" y="58" width="130.2" height="12" fill="#3572A5"/>
+<rect x="304.48799999999994" y="58" width="45.38399999999999" height="12" fill="#e34c26"/>
+<rect x="349.87199999999996" y="58" width="27.156" height="12" fill="#663399"/>
+<rect x="377.02799999999996" y="58" width="17.112" height="12" fill="#f1e05a"/>
 </g>
-<circle cx="29" cy="86" r="4" fill="#3572A5"/>
-<text x="40" y="90" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">Python</text>
-<text x="396" y="90" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">40.8%</text>
-<circle cx="29" cy="108" r="4" fill="#3178c6"/>
-<text x="40" y="112" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">TypeScript</text>
-<text x="396" y="112" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">31.2%</text>
+<circle cx="29" cy="86" r="4" fill="#3178c6"/>
+<text x="40" y="90" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">TypeScript</text>
+<text x="396" y="90" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">40.4%</text>
+<circle cx="29" cy="108" r="4" fill="#3572A5"/>
+<text x="40" y="112" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">Python</text>
+<text x="396" y="112" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">35.0%</text>
 <circle cx="29" cy="130" r="4" fill="#e34c26"/>
 <text x="40" y="134" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">HTML</text>
-<text x="396" y="134" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">14.1%</text>
+<text x="396" y="134" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">12.2%</text>
 <circle cx="29" cy="152" r="4" fill="#663399"/>
 <text x="40" y="156" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">CSS</text>
-<text x="396" y="156" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">8.1%</text>
+<text x="396" y="156" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">7.3%</text>
 <circle cx="29" cy="174" r="4" fill="#f1e05a"/>
 <text x="40" y="178" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">JavaScript</text>
-<text x="396" y="178" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">5.3%</text>
+<text x="396" y="178" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">4.6%</text>
 </svg>
