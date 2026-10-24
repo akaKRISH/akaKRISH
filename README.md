@@ -1,15 +1,15 @@
 <div align="center">
 
 <p align="center">
-  <code>RURU // ENGINEERING LAB</code>
+  <sub><b>RURU // ENGINEERING LAB</b></sub>
 </p>
 
 <br>
 
 <img
-  src="assets/ascii/ruru-laser-print.gif"
-  alt="Ruru colored ASCII portrait being laser printed"
-  width="900"
+  src="character/ruru.svg"
+  alt="RURU character dossier — a stylized vector portrait standing inside a split neon ring, framed with technical annotations"
+  width="560"
 />
 
 <br><br>
@@ -25,16 +25,16 @@
 <br>
 
 <p align="center">
-  <a href="https://github.com/akaKRISH"><img src="https://img.shields.io/badge/GITHUB-111827?style=flat-square&logo=github&logoColor=78c4ff" alt="GitHub" /></a>
+  <a href="https://akakrish.github.io/akaKRISH/interactive/character/"><img src="https://img.shields.io/badge/OPEN_3D_CHARACTER_DOSSIER-78C4FF?style=for-the-badge&labelColor=05070B" alt="Open the interactive 3D character dossier" /></a>
   &nbsp;
-  <a href="https://github.com/akaKRISH/GestureOS"><img src="https://img.shields.io/badge/GESTURE_OS-0b1220?style=flat-square&logo=googlelens&logoColor=78c4ff" alt="Gesture OS" /></a>
-  &nbsp;
-  <a href="https://akakrish.github.io/akaKRISH/interactive/"><img src="https://img.shields.io/badge/3D_LAB-0b1220?style=flat-square&logo=three.js&logoColor=9b8cff" alt="3D Lab" /></a>
+  <a href="https://akakrish.github.io/akaKRISH/interactive/"><img src="https://img.shields.io/badge/3D_CONTRIBUTION_FIELD-0b1220?style=for-the-badge&labelColor=05070B&logo=three.js&logoColor=78C4FF" alt="Open the 3D contribution field" /></a>
 </p>
+
+<sub>Hand-drawn layered SVG · pointer-driven parallax · no 3D engine</sub>
 
 </div>
 
-<br><br>
+<br>
 
 ---
 
@@ -56,7 +56,7 @@
     Data Structures & Algorithms · Python · Java · C++ · Systems design
 ```
 
-<br><br>
+<br>
 
 ---
 
@@ -64,17 +64,7 @@
 
 ## /flagship — Gesture OS
 
-<div align="center">
-
-```text
-========================================================================
-  GESTURE OS  //  TOUCHLESS SPATIAL COMPUTING PLATFORM
-========================================================================
-```
-
-</div>
-
-**GestureOS** transforms standard webcam feeds into a responsive, touchless desktop interaction layer. Built with on-device computer vision and low-latency event dispatching, it enables spatial navigation without proprietary hardware.
+**[GestureOS](https://github.com/akaKRISH/GestureOS)** transforms standard webcam feeds into a responsive, touchless desktop interaction layer. Built with on-device computer vision and low-latency event dispatching, it enables spatial navigation without proprietary hardware.
 
 ### Perception & Architecture
 * **Perception Layer:** 21 3D Hand Landmarks, 468 Face Mesh Points, 6-DoF Head Pose estimation via PnP, and 1€ Temporal Jitter Filtering.
@@ -88,15 +78,13 @@
 * **Privacy-First:** 100% on-device vision inference — zero video frames or telemetry leave the local machine.
 * **Extensibility:** Built-in Gesture Studio, plugin SDK, and full developer packaging pipeline.
 
-<br>
-
 <div align="center">
 
-[**Explore the GestureOS Repository & Architecture on GitHub →**](https://github.com/akaKRISH/GestureOS)
+[**Explore the GestureOS Repository & Architecture →**](https://github.com/akaKRISH/GestureOS)
 
 </div>
 
-<br><br>
+<br>
 
 ---
 
@@ -105,13 +93,13 @@
 ## /selected-work
 
 * **[GestureOS](https://github.com/akaKRISH/GestureOS)** — *(Flagship)* Touchless desktop automation, computer vision perception, and 3D spatial UI.
+* **[ARCEUS](https://github.com/akaKRISH/arceus-core)** — Local-first cognitive-agent research framework: memory, verified skills, and budgeted routing. Honest benchmarking, negative results included.
 * **[RuruOS](https://github.com/akaKRISH/RuruOS)** — AI-native personal engineering environment for automation, research, and developer workflows.
 * **[ruru-protocol](https://github.com/akaKRISH/ruru-protocol)** — Cinematic developer portfolio powered by React, Three.js, and custom shader engines.
 * **[Groundwater Prediction System](https://github.com/akaKRISH/GROUNDWATER_PREDICITION_SYSTEM)** — Environmental data modeling and machine learning prediction pipeline.
-* **[Agent Evaluator Hackathon](https://github.com/akaKRISH/agent-evaluator-hackathon)** — Autonomous AI agent evaluation benchmark and test framework.
 * **[LeetCode Practice](https://github.com/akaKRISH/LeetCode)** — Algorithmic problem solving, data structures, and computational optimization in C++.
 
-<br><br>
+<br>
 
 ---
 
@@ -120,24 +108,15 @@
 ## /stack
 
 **Languages**<br>
-`Python` · `Java` · `C++` · `JavaScript` · `TypeScript` · `HTML/CSS`
-
-<br>
+`Python` · `Java` · `C++` · `TypeScript` · `JavaScript` · `HTML/CSS`
 
 **AI & Computer Vision**<br>
-`OpenCV` · `MediaPipe` · `LLMs & AI Agents` · `PyTorch` · `Scikit-Learn`
-
-<br>
+`OpenCV` · `MediaPipe` · `PyTorch` · `Scikit-Learn` · `LLMs & AI Agents`
 
 **Systems & Web**<br>
 `React` · `Three.js` · `Qt / PySide6` · `Git` · `GitHub Actions` · `Linux` · `Docker`
 
 <br>
-
-**Current Depth-Building**<br>
-`DSA` · `Java Core` · `Low-Level Optimization` · `Agentic Architectures` · `Systems Design`
-
-<br><br>
 
 ---
 
@@ -151,7 +130,32 @@ I learn through intentional building: creating prototypes, developer tools, spat
 
 > **Learn deeply. Build boldly. Think beyond the obvious.**
 
-<br><br>
+<br>
+
+---
+
+<br>
+
+## /lab — this repository is itself an artifact
+
+The character dossier above is not a stock image. It is a hand-authored,
+layered SVG in [`character/ruru.svg`](character/ruru.svg), split into seven
+depth planes and rebuilt for this profile — and the interactive card runs on
+plain CSS transforms plus a few hundred bytes of JavaScript.
+
+<div align="center">
+
+<a href="https://akakrish.github.io/akaKRISH/interactive/character/">
+  <img src="assets/3d/profile-night-green.svg" alt="3D contribution field" width="100%" />
+</a>
+
+<a href="https://akakrish.github.io/akaKRISH/interactive/character/">
+  <img src="https://img.shields.io/badge/ENTER_THE_LAB-%E2%86%92-78C4FF?style=for-the-badge&labelColor=05070B" alt="Enter the lab" />
+</a>
+
+</div>
+
+<br>
 
 ---
 
@@ -162,56 +166,12 @@ I learn through intentional building: creating prototypes, developer tools, spat
 <div align="center">
 
 <a href="https://github.com/akaKRISH">
-  <picture>
-    <img src="assets/activity/github-overview.svg" alt="GitHub Overview" />
-  </picture>
+  <img src="assets/activity/github-overview.svg" alt="GitHub Overview" />
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/akaKRISH">
-  <picture>
-    <img src="assets/activity/github-languages.svg" alt="Language Distribution" />
-  </picture>
+  <img src="assets/activity/github-languages.svg" alt="Language Distribution" />
 </a>
-
-</div>
-
-<br><br>
-
----
-
-<br>
-
-## /3d-contribution-field
-
-<div align="center">
-
-<p><em>A visual topological map of engineering activity and commits.</em></p>
-
-<br>
-
-<a href="https://akakrish.github.io/akaKRISH/interactive/">
-  <img src="assets/3d/profile-night-green.svg" alt="3D Contribution Graph" width="100%" />
-</a>
-
-<br><br>
-
-<a href="https://akakrish.github.io/akaKRISH/interactive/">
-  <img src="https://img.shields.io/badge/OPEN_INTERACTIVE_3D_LAB_→-0B111C?style=for-the-badge&logo=three.js&logoColor=78C4FF&labelColor=05070B" alt="Open Interactive 3D View" />
-</a>
-
-<p><sub>Click to launch interactive 3D rotation, tilt, and zoom in the browser</sub></p>
-
-</div>
-
-<br><br>
-
----
-
-<br>
-
-## /contribution-trajectory
-
-<div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/snake/github-contribution-grid-snake-dark.svg">
@@ -221,20 +181,18 @@ I learn through intentional building: creating prototypes, developer tools, spat
 
 </div>
 
-<br><br>
+<br>
 
 ---
 
 <div align="center">
 
+[GitHub](https://github.com/akaKRISH) &nbsp;·&nbsp; [GestureOS](https://github.com/akaKRISH/GestureOS) &nbsp;·&nbsp; [ARCEUS](https://github.com/akaKRISH/arceus-core) &nbsp;·&nbsp; [Character Dossier](https://akakrish.github.io/akaKRISH/interactive/character/) &nbsp;·&nbsp; [Contribution Field](https://akakrish.github.io/akaKRISH/interactive/)
+
 <br>
-
-[GitHub](https://github.com/akaKRISH) &nbsp;·&nbsp; [GestureOS](https://github.com/akaKRISH/GestureOS) &nbsp;·&nbsp; [RuruOS](https://github.com/akaKRISH/RuruOS) &nbsp;·&nbsp; [Interactive Lab](https://akakrish.github.io/akaKRISH/interactive/)
-
-<br><br>
 
 <code>RURU // building intelligent systems one layer at a time.</code>
 
-<br><br>
+<br>
 
 </div>

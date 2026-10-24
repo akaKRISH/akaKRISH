@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - "interactive/**"
+      - "character/**"
       - "assets/3d/**"
+      - "README.md"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 

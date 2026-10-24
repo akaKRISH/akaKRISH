@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05070b">
+<title>RURU — Character Dossier 001</title>
+<meta name="description" content="Interactive 3D character dossier for RURU // ENGINEERING LAB — layered vector portrait with pointer-driven parallax.">
+<style>
+  :root{
+    color-scheme:dark;
+    --bg:#05070b; --panel:#0b1220; --panel2:#081120; --line:#1d2a40;
+    --cyan:#78c4ff; --violet:#9b8cff; --gold:#ffca7a; --text:#e8eef7; --muted:#8493a8;
+    --mono:'JetBrains Mono','Cascadia Code',Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif}
+  body{min-height:100vh;
+    background:
+      radial-gradient(900px 500px at 78% -10%,#13213b22,transparent 60%),
+      radial-gradient(760px 520px at 8% 110%,#0d1a2c33,transparent 55%),
+      var(--bg);
+  }
+  a{color:var(--cyan);text-decoration:none}
+  a:hover,a:focus-visible{text-decoration:underline}
+
+  .top{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:26px clamp(20px,4vw,56px) 0;max-width:1240px;margin:0 auto;
+  }
+  @media (max-width:640px){
+    .top{flex-wrap:wrap}.brand{order:-1;width:100%}
+  }
+  .brand{font:600 15px/1 var(--mono);letter-spacing:3px;color:var(--text)}
+  .brand em{font-style:normal;color:var(--cyan)}
+  .topnav{display:flex;gap:10px;flex-wrap:wrap}
+  .pill{
+    font:11px/1 var(--mono);letter-spacing:1.5px;color:var(--muted);
+    border:1px solid var(--line);border-radius:999px;padding:9px 13px;
+    background:var(--panel);transition:color .2s,border-color .2s;
+  }
+  .pill:hover,.pill:focus-visible{color:var(--text);border-color:var(--cyan)}
+
+  main{max-width:1240px;margin:0 auto;padding:clamp(28px,5vh,64px) clamp(20px,4vw,56px) 72px}
+  .stage{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);
+    gap:clamp(20px,3vw,40px);align-items:center;
+  }
+  @media (max-width:960px){
+    .stage{grid-template-columns:1fr;justify-items:center}
+    .side.left{order:2}.side.right{order:3}.cardwrap{order:1}
+  }
+
+  .side h1{
+    font-size:clamp(30px,4vw,44px);line-height:1.08;margin:10px 0 14px;font-weight:750;letter-spacing:-.5px;
+  }
+  .eyebrow{font:11px/1.4 var(--mono);letter-spacing:3px;color:var(--cyan)}
+  .side p.lead{color:var(--muted);font-size:15px;line-height:1.65;margin:0 0 22px;max-width:34ch}
+  .cta{
+    display:inline-flex;align-items:center;gap:10px;
+    font:600 13px/1 var(--mono);letter-spacing:1.5px;
+    color:#06121f;background:var(--cyan);
+    padding:13px 18px;border-radius:10px;border:0;cursor:pointer;
+    transition:transform .15s ease, box-shadow .2s ease;
+    box-shadow:0 6px 24px #78c4ff2b;
+  }
+  .cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px #78c4ff3d}
+  .cta:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+  .cta[data-hint]{--hint:var(--muted)}
+  .hint{font:11px/1.5 var(--mono);color:var(--muted);margin-top:12px}
+
+  .specs{list-style:none;margin:0;padding:0;display:grid;gap:9px;font:12px/1.5 var(--mono)}
+  .specs li{display:grid;grid-template-columns:86px 1fr;gap:10px;border-bottom:1px dashed #1d2a4055;padding-bottom:9px}
+  .specs b{color:var(--muted);font-weight:500;letter-spacing:1.5px}
+  .specs span{color:var(--text)}
+  .accent-cyan{color:var(--cyan)}.accent-gold{color:var(--gold)}
+
+  /* ── 3D card ─────────────────────────────────────────── */
+  .cardwrap{perspective:1600px;display:grid;place-items:center;width:100%}
+  .card{
+    position:relative;width:min(480px,100%);aspect-ratio:5/6;
+    transform-style:preserve-3d;will-change:transform;
+    border-radius:22px;
+    transition:transform .18s ease-out, box-shadow .3s ease;
+    box-shadow:0 30px 80px #0009, 0 0 0 1px #1d2a4088;
+  }
+  .card:focus-visible{outline:2px solid var(--cyan);outline-offset:6px}
+  .card:hover{box-shadow:0 40px 100px #000b, 0 0 0 1px #2c506f88}
+  .plate{
+    position:absolute;inset:0;border-radius:22px;overflow:hidden;
+    background:linear-gradient(150deg,#0a1524ee,#05070bfa);
+    transform:translateZ(0);
+  }
+  .plate iframe{width:100%;height:100%;border:0;display:block;transform:translateZ(1px);pointer-events:none}
+  .frost{
+    position:absolute;inset:-1px;border-radius:22px;pointer-events:none;
+    background:linear-gradient(155deg,#ffffff10 0%,transparent 28%,transparent 76%,#78c4ff14 100%);
+    transform:translateZ(46px);
+    box-shadow:inset 0 1px 0 #ffffff1c;
+  }
+  .scanline{
+    position:absolute;left:8%;right:8%;height:1px;pointer-events:none;
+    background:linear-gradient(90deg,transparent,#78c4ff66,transparent);
+    top:0;opacity:0;transform:translateZ(60px);
+  }
+  .card.live .scanline{opacity:1;animation:scan 5.5s linear infinite}
+  @keyframes scan{0%{top:8%}88%{top:92%}100%{top:92%;opacity:0}}
+  .shadow{
+    position:absolute;left:6%;right:6%;bottom:-7%;height:12%;
+    background:radial-gradient(50% 90% at 50% 50%,#000a,transparent 72%);
+    transform:translateZ(-120px);filter:blur(14px);
+  }
+
+  /* cursor-follow sheen */
+  .sheen{
+    position:absolute;inset:0;border-radius:22px;pointer-events:none;transform:translateZ(40px);
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,40%),#78c4ff0f,transparent 65%);
+    opacity:0;transition:opacity .3s;
+  }
+  .card.live .sheen{opacity:1}
+
+  .badge{
+    position:absolute;left:18px;bottom:16px;transform:translateZ(56px);
+    font:10px/1 var(--mono);letter-spacing:2px;color:var(--muted);
+    border:1px solid var(--line);background:#05070bd9;border-radius:999px;padding:8px 12px;
+  }
+  .badge em{font-style:normal;color:var(--cyan)}
+  .serial{
+    position:absolute;right:18px;top:16px;transform:translateZ(56px);
+    font:10px/1 var(--mono);letter-spacing:2px;color:#ffca7acc;
+  }
+
+  .foot{
+    max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,56px) 56px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font:11px/1.6 var(--mono);color:var(--muted);letter-spacing:1px;
+    border-top:1px solid #1d2a4033;padding-top:26px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .card,.frost,.sheen,.badge,.serial{transition:none}
+    .card.live .scanline{animation:none;opacity:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="brand">RURU<em>//</em>ENGINEERING LAB</div>
+  <nav class="topnav" aria-label="Lab navigation">
+    <a class="pill" href="../">CONTRIBUTION FIELD</a>
+    <a class="pill" href="https://github.com/akaKRISH">GITHUB</a>
+    <a class="pill" href="https://github.com/akaKRISH/GestureOS">GESTURE OS</a>
+  </nav>
+</div>
+
+<main>
+  <div class="stage">
+
+    <aside class="side left">
+      <div class="eyebrow">CHARACTER DOSSIER · 001</div>
+      <h1>RURU, rendered in layers.</h1>
+      <p class="lead">A hand-authored vector portrait split into seven depth planes — portal, halo, body, face, hair, glasses, HUD. Built for this profile; no image stock, no generated raster.</p>
+      <button class="cta" id="engage" aria-pressed="false" data-hint>ENGAGE PARALLAX</button>
+      <p class="hint" id="hint">Move the pointer over the card — each depth plane answers at its own amplitude.</p>
+    </aside>
+
+    <div class="cardwrap">
+      <div class="card" id="card" tabindex="0" role="img" aria-label="RURU character card — stylized vector portrait inside a split neon ring">
+        <div class="shadow" aria-hidden="true"></div>
+        <div class="plate"><iframe id="art" src="art.html" title="" tabindex="-1" aria-hidden="true"></iframe></div>
+        <div class="sheen" aria-hidden="true"></div>
+        <div class="frost" aria-hidden="true"></div>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="serial" aria-hidden="true">SN · D-001</div>
+        <div class="badge"><em>2.5D</em> · 7 PLANES · 1 SVG</div>
+      </div>
+    </div>
+
+    <aside class="side right">
+      <div class="eyebrow">SPECIFICATION</div><br>
+      <ul class="specs">
+        <li><b>CLASS</b><span>BUILDER / CV</span></li>
+        <li><b>DOMAIN</b><span>VISION.SYS</span></li>
+        <li><b>MOTIF</b><span class="accent-gold">SPLIT-RING</span></li>
+        <li><b>FORMAT</b><span>SVG · HAND-DRAWN</span></li>
+        <li><b>STATUS</b><span class="accent-cyan">BUILDING</span></li>
+        <li><b>ORIGIN</b><span><a href="../../character/ruru.svg">character/ruru.svg</a></span></li>
+      </ul>
+      <br>
+      <div class="eyebrow">NOW BUILDING</div><br>
+      <ul class="specs">
+        <li><b>01</b><span>GestureOS</span></li>
+        <li><b>02</b><span>RuruOS</span></li>
+        <li><b>03</b><span>Ruru Protocol</span></li>
+      </ul>
+    </aside>
+
+  </div>
+</main>
+
+<div class="foot">
+  <span>AKAKRISH.GITHUB.IO/CHARACTER</span>
+  <span>BUILT WITH SVG + CSS TRANSFORMS · NO 3D ENGINE</span>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var card=document.getElementById('card');
+  var frame=document.getElementById('art');
+  var engageBtn=document.getElementById('engage');
+  var hint=document.getElementById('hint');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var live=false, raf=0, tx=0, ty=0, cx=0, cy=0;
+
+  // load the layered art embed (generated by scripts/embed_art.py);
+  // pointer-events none lets card-level handlers receive the pointer
+  frame.title='';
+
+  function render(){
+    raf=0;
+    card.style.transform='rotateX('+ty.toFixed(2)+'deg) rotateY('+tx.toFixed(2)+'deg)';
+    try{ frame.contentWindow.postMessage({rx:ty, ry:tx}, '*'); }catch(err){/* pre-load */}
+  }
+  function schedule(){ if(!raf) raf=requestAnimationFrame(render); }
+
+  function enable(){
+    live=true; engageBtn.setAttribute('aria-pressed','true');
+    engageBtn.textContent='DISENGAGE';
+    hint.textContent='ESC also resets. Touch: tilt follows finger drags on the card.';
+    card.classList.add('live');
+  }
+  function disable(){
+    live=false; engageBtn.setAttribute('aria-pressed','false');
+    engageBtn.textContent='ENGAGE PARALLAX';
+    hint.textContent='Parallax off — the card rests flat. Engage to bring it alive.';
+    card.classList.remove('live');
+    tx=ty=0; cx=cy=0; schedule();
+  }
+
+  function pointer(e){
+    var r=card.getBoundingClientRect();
+    var px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+    tx=px*10; ty=-py*7;               // rotate degrees
+    cx=px*100+50; cy=py*100+50;       // sheen %
+    card.style.setProperty('--mx',cx+'%');
+    card.style.setProperty('--my',cy+'%');
+    schedule();
+  }
+
+  card.addEventListener('pointermove',function(e){
+    if(!live||reduce.matches||e.pointerType==='touch')return;
+    pointer(e);
+  });
+  card.addEventListener('pointerleave',function(){
+    if(!live||reduce.matches)return;
+    tx=ty=0; schedule();
+  });
+  // track sheen even when tilt is off
+  card.addEventListener('pointermove',function(e){
+    var r=card.getBoundingClientRect();
+    card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+    card.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');
+  });
+  // touch: gentle tilt while dragging on the card itself
+  card.addEventListener('touchmove',function(e){
+    if(!live||reduce.matches)return;
+    var t=e.touches[0]; if(!t)return;
+    pointer(t);
+  },{passive:true});
+  card.addEventListener('touchend',function(){
+    if(!live||reduce.matches)return;
+    tx=ty=0; schedule();
+  });
+
+  card.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){disable();return;}
+    if(e.key==='Enter'){ live?disable():enable(); return; }
+    if(!live)return;
+    var step=e.shiftKey?4:2;
+    if(e.key==='ArrowLeft') tx=Math.max(-12,tx-step);
+    else if(e.key==='ArrowRight') tx=Math.min(12,tx+step);
+    else if(e.key==='ArrowUp') ty=Math.min(10,ty+step);
+    else if(e.key==='ArrowDown') ty=Math.max(-10,ty-step);
+    else return;
+    e.preventDefault(); schedule();
+  });
+
+  engageBtn.addEventListener('click',function(){ live?disable():enable(); });
+
+  // entry: soft rise once; skipped for reduced motion
+  if(!reduce.matches){
+    card.style.opacity='0';
+    card.style.transform='translateY(14px)';
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      card.style.transition='opacity .7s ease, transform .7s ease';
+      card.style.opacity='1'; card.style.transform='none';
+      setTimeout(function(){ card.style.transition='transform .18s ease-out, box-shadow .3s ease'; },750);
+    });});
+  }
+})();
+</script>
+</body>
+</html>

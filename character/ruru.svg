@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-labelledby="ruruTitle ruruDesc">
+  <title id="ruruTitle">RURU dossier portrait — layered 2.5D vector character</title>
+  <desc id="ruruDesc">A stylized vector portrait of RURU standing inside a split neon ring (cyan left, warm gold right), dark curly hair mass, glasses with a cyan reflection, checked-collar jacket. Hand-authored SVG layers for depth.</desc>
+
+  <defs>
+    <!-- palette: #05070b base · #78c4ff cyan · #9b8cff violet · #ffca7a gold · #e8eef7 text -->
+    <radialGradient id="bgNight" cx="42%" cy="16%" r="90%">
+      <stop offset="0%" stop-color="#0d1a2c"/>
+      <stop offset="55%" stop-color="#081120"/>
+      <stop offset="100%" stop-color="#05070b"/>
+    </radialGradient>
+    <linearGradient id="ringCyan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#78c4ff"/>
+      <stop offset="100%" stop-color="#2c506f"/>
+    </linearGradient>
+    <linearGradient id="ringGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffca7a"/>
+      <stop offset="100%" stop-color="#63431b"/>
+    </linearGradient>
+    <linearGradient id="hairDark" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#16283f"/>
+      <stop offset="65%" stop-color="#0a1526"/>
+      <stop offset="100%" stop-color="#060b15"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#1a2f4a"/>
+      <stop offset="55%" stop-color="#101f33"/>
+      <stop offset="100%" stop-color="#0a1526"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#99775c"/>
+      <stop offset="100%" stop-color="#5d412f"/>
+    </linearGradient>
+    <linearGradient id="lightCone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#78c4ff" stop-opacity="0.16"/>
+      <stop offset="75%" stop-color="#78c4ff" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#78c4ff" stop-opacity="0"/>
+    </linearGradient>
+    <!-- checkered shirt pattern (echo of the real checked shirt) -->
+    <pattern id="plaid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <rect width="18" height="18" fill="#5a4230"/>
+      <rect width="18" height="2.6" y="0" fill="#e8e2d8" opacity="0.5"/>
+      <rect width="2.6" height="18" x="0" fill="#e8e2d8" opacity="0.5"/>
+      <rect width="18" height="1.2" y="9" fill="#c4b8a6" opacity="0.35"/>
+      <rect width="1.2" height="18" x="9" fill="#c4b8a6" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- ═══════════ LAYER:portal (depth plane, farthest) ═══════════ -->
+  <g id="layer-portal" data-plane="-150">
+    <rect width="600" height="720" fill="url(#bgNight)"/>
+    <!-- sparse star field -->
+    <g fill="#78c4ff" opacity="0.14">
+      <circle cx="48" cy="92" r="1.1"/><circle cx="551" cy="64" r="0.9"/><circle cx="470" cy="120" r="1.2"/>
+      <circle cx="70" cy="360" r="0.9"/><circle cx="545" cy="330" r="1.1"/><circle cx="128" cy="600" r="0.9"/>
+      <circle cx="500" cy="580" r="1.2"/><circle cx="332" cy="46" r="0.9"/><circle cx="221" cy="112" r="0.8"/>
+    </g>
+    <!-- split portal ring: cyan left arc, gold right arc -->
+    <g transform="translate(285,332)">
+      <path d="M 6,-168 A 168,168 0 0 0 6,168" fill="none" stroke="url(#ringCyan)" stroke-width="6" opacity="0.9"/>
+      <path d="M -6,-168 A 168,168 0 0 1 -6,168" fill="none" stroke="url(#ringGold)" stroke-width="3.6" opacity="0.8"/>
+      <path d="M 6,-168 A 168,168 0 0 0 6,168" fill="none" stroke="#78c4ff" stroke-width="14" opacity="0.07"/>
+      <path d="M -6,-168 A 168,168 0 0 1 -6,168" fill="none" stroke="#ffca7a" stroke-width="10" opacity="0.07"/>
+      <!-- node ticks -->
+      <rect x="2" y="-178" width="8" height="3.6" rx="1.8" fill="#78c4ff" opacity="0.85"/>
+      <rect x="2" y="174" width="8" height="3.6" rx="1.8" fill="#78c4ff" opacity="0.85"/>
+      <circle cx="-177" cy="0" r="2.6" fill="#ffca7a" opacity="0.9"/>
+      <!-- ID chip riding the gold arc -->
+      <g transform="translate(-150,-120) rotate(38)">
+        <rect x="-30" y="-10" width="60" height="20" rx="10" fill="#0b1220" stroke="#ffca7a" stroke-opacity="0.6" stroke-width="1"/>
+        <text x="0" y="3.6" font-family="'JetBrains Mono','Consolas',monospace" font-size="10" fill="#ffca7a" text-anchor="middle" letter-spacing="2">ID.001</text>
+      </g>
+    </g>
+    <!-- top light cone -->
+    <path d="M 84,-16 L 52,470 L 520,470 Z" fill="url(#lightCone)"/>
+  </g>
+
+  <!-- ═══════════ LAYER:halo (behind the figure) ═══════════ -->
+  <g id="layer-halo" data-plane="-80">
+    <circle cx="272" cy="322" r="118" fill="#0b1220" opacity="0.5"/>
+    <circle cx="272" cy="322" r="118" fill="none" stroke="#1d2a40" stroke-width="1"/>
+    <circle cx="272" cy="322" r="112" fill="#081120" opacity="0.75"/>
+    <!-- construction crosshairs -->
+    <g stroke="#78c4ff" stroke-opacity="0.18" stroke-width="1">
+      <line x1="134" y1="322" x2="410" y2="322"/>
+      <line x1="272" y1="184" x2="272" y2="460"/>
+    </g>
+  </g>
+
+  <!-- ═══════════ LAYER:body (torso, jacket, shirt) ═══════════ -->
+  <g id="layer-body" data-plane="0">
+    <!-- neck -->
+    <path d="M 250,398 L 250,438 Q 272,456 294,438 L 294,398 Z" fill="#4a3426"/>
+    <path d="M 250,410 C 262,428 282,428 294,410" fill="none" stroke="#2c2016" stroke-width="5" stroke-opacity="0.6"/>
+    <!-- shoulders + jacket -->
+    <path d="M 272,434
+             C 186,444 142,500 134,590
+             L 128,720 L 432,720 L 426,590
+             C 418,500 374,444 288,434 Z" fill="url(#jacket)"/>
+    <!-- open-collar shirt: narrow V wedge under jacket lapels -->
+    <path d="M 248,446 L 296,446 L 272,524 Z" fill="#241a10"/>
+    <path d="M 252,450 L 292,450 L 272,516 Z" fill="url(#plaid)"/>
+    <!-- zip line -->
+    <path d="M 272,530 L 272,720" stroke="#78c4ff" stroke-opacity="0.25" stroke-width="1.4" stroke-dasharray="5 4"/>
+    <!-- collar + lapel edges -->
+    <path d="M 248,446 L 272,524 L 296,446" fill="none" stroke="#0d1a2e" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M 240,446 L 226,430 M 304,446 L 318,430" stroke="#0d1a2e" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <!-- shoulder rim lights -->
+    <path d="M 172,560 C 168,508 198,464 252,448" fill="none" stroke="#78c4ff" stroke-opacity="0.5" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M 390,560 C 394,508 364,464 310,448" fill="none" stroke="#ffca7a" stroke-opacity="0.45" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ═══════════ LAYER:face ═══════════ -->
+  <g id="layer-face" data-plane="34">
+    <g transform="translate(272,310) rotate(-3)">
+      <!-- head: elongated, tapering to jaw -->
+      <path d="M 0,-96 C 50,-96 70,-58 70,-14 C 70,26 52,66 22,84 Q 0,96 -22,84 C -52,66 -70,26 -70,-14 C -70,-58 -50,-96 0,-96 Z" fill="url(#skin)"/>
+      <!-- ears -->
+      <path d="M -70,-14 C -80,-20 -84,2 -70,14 Z" fill="#4e3727"/>
+      <path d="M 70,-14 C 80,-20 84,2 70,14 Z" fill="#4e3727"/>
+      <!-- left-lit shadow side -->
+      <path d="M 24,-94 C 60,-80 70,-44 68,-4 C 66,36 46,70 18,84 C 34,60 42,18 40,-20 C 38,-56 32,-80 24,-94 Z" fill="#3c2a1d" opacity="0.45"/>
+      <!-- calm closed mouth, slight smile -->
+      <path d="M -9,46 Q 0,51 10,45" fill="none" stroke="#241408" stroke-width="2.6" stroke-linecap="round"/>
+      <!-- nose: small and subtle -->
+      <path d="M -1,10 L -3,32 Q 1,37 8,33" fill="none" stroke="#4a3426" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- calm brows (eyes live behind glasses) -->
+      <path d="M -44,-16 Q -28,-24 -10,-19" fill="none" stroke="#1c1209" stroke-width="4.4" stroke-linecap="round"/>
+      <path d="M 12,-19 Q 30,-24 44,-16" fill="none" stroke="#1c1209" stroke-width="4.4" stroke-linecap="round"/>
+      <!-- serene eyes: lazy lids with dark lash line -->
+      <path d="M -40,-4 Q -26,-10 -12,-4" fill="none" stroke="#241809" stroke-width="3.6" stroke-linecap="round"/>
+      <path d="M 12,-4 Q 26,-10 40,-4" fill="none" stroke="#241809" stroke-width="3.6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ═══════════ LAYER:hair (unified curl mass) ═══════════ -->
+  <g id="layer-hair" data-plane="58">
+    <g transform="translate(272,298) rotate(-3)">
+      <!-- asymmetric unified mass: heavy top-left sweep, tapering right -->
+      <path d="M -62,-52
+               C -70,-108 -20,-138 12,-134
+               C 56,-130 78,-96 76,-58
+               C 90,-40 88,-10 78,4
+               C 74,-22 66,-44 54,-56
+               C 40,-72 16,-80 -4,-78
+               C -28,-76 -50,-64 -60,-44
+               C -66,-30 -68,-10 -64,6
+               C -76,-6 -78,-34 -68,-44
+               Z" fill="url(#hairDark)"/>
+      <!-- integrated cloud lobes (no detached curls) -->
+      <path d="M -64,-60 C -80,-82 -74,-116 -50,-128 C -66,-114 -70,-92 -60,-72 Z" fill="url(#hairDark)"/>
+      <path d="M 76,-58 C 86,-74 94,-100 80,-118 C 86,-102 84,-80 72,-66 Z" fill="url(#hairDark)"/>
+      <!-- hair shine: two cyan-white arcs -->
+      <path d="M -34,-112 C -12,-122 18,-122 40,-110" fill="none" stroke="#78c4ff" stroke-opacity="0.30" stroke-width="3" stroke-linecap="round"/>
+      <path d="M -22,-100 C -4,-108 18,-108 34,-99" fill="none" stroke="#9b8cff" stroke-opacity="0.24" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- fringe hook over the brow -->
+      <path d="M -50,-48 C -44,-30 -34,-20 -22,-16 C -38,-10 -50,-20 -52,-36 Z" fill="url(#hairDark)"/>
+      <!-- cyan rim left / gold rim right -->
+      <path d="M -62,-52 C -70,-108 -20,-138 12,-134" fill="none" stroke="#78c4ff" stroke-opacity="0.5" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M 78,4 C 88,-10 90,-40 76,-58" fill="none" stroke="#ffca7a" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ═══════════ LAYER:glasses (signature: cyan-reflecting lenses) ═══════════ -->
+  <g id="layer-glasses" data-plane="86">
+    <g transform="translate(272,306) rotate(-3)">
+      <!-- lens frames -->
+      <path d="M -50,-8 Q -51,-25 -33,-25 L -11,-25 Q -1,-25 -1,-11 L -1,-4 Q -1,9 -13,9 L -33,9 Q -50,9 -50,-8 Z" fill="#05070b" fill-opacity="0.38" stroke="#1b140c" stroke-width="4.2"/>
+      <path d="M 50,-8 Q 51,-25 33,-25 L 11,-25 Q 1,-25 1,-11 L 1,-4 Q 1,9 13,9 L 33,9 Q 50,9 50,-8 Z" fill="#05070b" fill-opacity="0.38" stroke="#1b140c" stroke-width="4.2"/>
+      <!-- bridge + temple arms -->
+      <path d="M -1,-13 Q 0,-17 1,-13" fill="none" stroke="#1b140c" stroke-width="4.2"/>
+      <path d="M -50,-6 L -58,-3 M 50,-6 L 58,-3" stroke="#1b140c" stroke-width="3.6" stroke-linecap="round"/>
+      <!-- cyan data reflection sweeps (the signature glow) -->
+      <rect x="-46" y="-21" width="42" height="27" rx="6" fill="#78c4ff" opacity="0.10"/>
+      <path d="M -44,-15 L -14,-15 M -44,-7 L -18,-7" stroke="#78c4ff" stroke-opacity="0.55" stroke-width="1.5"/>
+      <path d="M -44,1 L -24,1" stroke="#9b8cff" stroke-opacity="0.5" stroke-width="1.3"/>
+      <rect x="4" y="-21" width="42" height="27" rx="6" fill="#78c4ff" opacity="0.08"/>
+      <path d="M 8,-15 L 38,-15 M 8,-7 L 28,-7" stroke="#78c4ff" stroke-opacity="0.5" stroke-width="1.5"/>
+      <!-- temple glow dots -->
+      <circle cx="-59" cy="-3" r="2" fill="#78c4ff" opacity="0.85"/>
+      <circle cx="59" cy="-3" r="2" fill="#78c4ff" opacity="0.45"/>
+    </g>
+  </g>
+
+  <!-- ═══════════ LAYER:hud (frontmost dossier annotations) ═══════════ -->
+  <g id="layer-hud" data-plane="120" font-family="'JetBrains Mono','Consolas',monospace">
+    <!-- top-left header block -->
+    <g transform="translate(34,46)">
+      <text x="0" y="0" font-size="13" fill="#78c4ff" letter-spacing="4">RURU.EXE</text>
+      <text x="0" y="20" font-size="10" fill="#8493a8" letter-spacing="2">PLAYER DOSSIER 001</text>
+      <path d="M 0,30 h 88" stroke="#78c4ff" stroke-opacity="0.4" stroke-width="1"/>
+      <rect x="92" y="25" width="7" height="7" fill="#78c4ff" opacity="0.9"/>
+    </g>
+    <!-- top-right capture chip -->
+    <g transform="translate(404,46)">
+      <rect x="0" y="0" width="162" height="24" rx="12" fill="#0b1220" stroke="#1d2a40"/>
+      <circle cx="14" cy="12" r="3.2" fill="#78c4ff"/>
+      <text x="26" y="16" font-size="10.5" fill="#9aa8bb" letter-spacing="1.5">VECTOR / 2.5D</text>
+    </g>
+    <!-- right-side stat rail (clear of the ring) -->
+    <g transform="translate(486,240)" font-size="10.5">
+      <text x="0" y="0" fill="#8493a8" letter-spacing="1.5">CLASS</text>
+      <text x="0" y="16" fill="#e8eef7">BUILDER / CV</text>
+      <text x="0" y="44" fill="#8493a8" letter-spacing="1.5">DOMAIN</text>
+      <text x="0" y="60" fill="#e8eef7">VISION.SYS</text>
+      <text x="0" y="88" fill="#8493a8" letter-spacing="1.5">STATUS</text>
+      <text x="0" y="104" fill="#78c4ff">BUILDING</text>
+      <text x="0" y="132" fill="#8493a8" letter-spacing="1.5">MOTIF</text>
+      <text x="0" y="148" fill="#ffca7a">SPLIT-RING</text>
+    </g>
+    <!-- bottom-left footer -->
+    <g transform="translate(34,666)">
+      <text x="0" y="0" font-size="10" fill="#8493a8" letter-spacing="1.5">AKAKRISH.GITHUB.IO/CHARACTER</text>
+    </g>
+    <!-- frame ticks -->
+    <g stroke="#78c4ff" stroke-opacity="0.5" stroke-width="1.4" fill="none">
+      <path d="M 566,640 v 14 M 566,640 h -14"/>
+      <path d="M 34,640 v 14 M 34,640 h 14"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+# local verification harness (not part of the shipped site)
+node_modules/
+package.json
+package-lock.json
+shot.js
+verify.js
+shots/
+character/preview.html
+character/preview.png
