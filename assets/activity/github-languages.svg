@@ -5,15 +5,15 @@
 <line x1="24" y1="46" x2="396" y2="46" stroke="#1B2638" stroke-width="1"/>
 <clipPath id="bar-clip"><rect x="24" y="58" width="372" height="12" rx="6"/></clipPath>
 <g clip-path="url(#bar-clip)">
-<rect x="24" y="58" width="198.648" height="12" fill="#3572A5"/>
-<rect x="222.648" y="58" width="94.86" height="12" fill="#3178c6"/>
-<rect x="317.508" y="58" width="35.711999999999996" height="12" fill="#e34c26"/>
-<rect x="353.21999999999997" y="58" width="20.088" height="12" fill="#f1e05a"/>
-<rect x="373.308" y="58" width="19.715999999999998" height="12" fill="#663399"/>
+<rect x="24" y="58" width="198.27599999999998" height="12" fill="#3572A5"/>
+<rect x="222.27599999999998" y="58" width="94.86" height="12" fill="#3178c6"/>
+<rect x="317.13599999999997" y="58" width="35.711999999999996" height="12" fill="#e34c26"/>
+<rect x="352.84799999999996" y="58" width="20.088" height="12" fill="#f1e05a"/>
+<rect x="372.936" y="58" width="19.715999999999998" height="12" fill="#663399"/>
 </g>
 <circle cx="29" cy="86" r="4" fill="#3572A5"/>
 <text x="40" y="90" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">Python</text>
-<text x="396" y="90" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">53.4%</text>
+<text x="396" y="90" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">53.3%</text>
 <circle cx="29" cy="108" r="4" fill="#3178c6"/>
 <text x="40" y="112" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">TypeScript</text>
 <text x="396" y="112" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">25.5%</text>
