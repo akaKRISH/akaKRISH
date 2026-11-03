@@ -22,6 +22,7 @@ class Assets(HTMLParser):
         if tag == "img":
             self.images += 1
             assert attrs.get("alt", "").strip(), "An image has no alternative text"
+            assert "height" not in attrs, "Fixed README image height can distort images when GitHub clamps width"
         if tag == "picture":
             self.pictures += 1
         for key in ("src", "srcset", "href"):

@@ -18,6 +18,7 @@ node scripts/render_profile.mjs "C:\Users\2k25c\Downloads\ruru pfp.png"
 python scripts/validate_profile.py
 python -m unittest discover -s scripts -p test_activity.py -v
 node scripts/preview_profile.mjs
+node scripts/preview_profile.mjs --github
 ```
 
 Omit the portrait argument to reuse `assets/profile/portrait.jpg`. `render_profile.mjs` uses an offscreen browser composition to produce PNG frames, rasterizes correctly shaped Devanagari text, captures two actual public project previews, and invokes the Pillow encoder. It does not write or modify any interactive page. The first build fetches Google Fonts (DM Sans, Instrument Serif, and Noto Serif Devanagari); fonts are rasterized into the output, not requested by README readers. Font sources are Google Fonts under their respective OFL licenses.
@@ -46,7 +47,7 @@ Activity is generated from GitHub data, with explicit periods and timestamps, no
 
 `preview_profile.mjs` asks GitHub's authenticated Markdown API to sanitize the actual README, then previews that returned markup with GitHub's own loaded stylesheets. It checks 1280px and 375px layouts in light/dark themes, collapsed/expanded disclosures, all decoded images, reduced-motion source selection, mobile closing selection, actual GIF playback, and its stable final frame. Local screenshots and sanitized HTML are written only under ignored `shots/`; there is no preview server or deployed application.
 
-The Markdown API retained both the reduced-motion and mobile `<source media>` attributes during testing. A real branch-rendered README must also be inspected on GitHub before declaring the remote rendering verified. Local browser rendering does not guarantee behavior in every browser or assistive technology.
+The Markdown API retained both the reduced-motion and mobile `<source media>` attributes during testing. The real branch-rendered README was also tested on GitHub at desktop/mobile sizes, including decoded assets, source selection, GIF playback, and image aspect ratios. That check caught GitHub's fixed-height image distortion under width clamping; README images deliberately omit HTML height attributes, and a regression check enforces this. Browser rendering does not guarantee behavior in every browser or assistive technology.
 
 ## Content Decisions
 

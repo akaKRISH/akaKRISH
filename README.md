@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/hero-static.png">
-  <img src="assets/profile/hero-assembly.gif" alt="I'm Rudransh. But Ruru works. Four cursors assemble my real portrait. Curiosity into capability." width="1200" height="560">
+  <img src="assets/profile/hero-assembly.gif" alt="I'm Rudransh. But Ruru works. Four cursors assemble my real portrait. Curiosity into capability." width="1200">
 </picture>
 
 # Rudransh Singh
@@ -52,11 +52,11 @@ I'm exploring **computer vision, local-first AI, developer tools, and creative w
 
 **GDGoC Community Website** · Public website capture
 
-<a href="https://gdgoc-community-website.vercel.app"><img src="assets/profile/gdgoc-preview.jpg" alt="Actual GDGoC community website: Learn, Connect, Grow, with the community mascot and event navigation" width="900" height="625"></a>
+<a href="https://gdgoc-community-website.vercel.app"><img src="assets/profile/gdgoc-preview.jpg" alt="Actual GDGoC community website: Learn, Connect, Grow, with the community mascot and event navigation" width="900"></a>
 
 **BloodBond** · Prototype capture with sample data
 
-<a href="https://akakrish.github.io/BloodBond/"><img src="assets/profile/bloodbond-preview.jpg" alt="Actual BloodBond prototype preview; displayed donor information is sample data, not a verified live network" width="900" height="625"></a>
+<a href="https://akakrish.github.io/BloodBond/"><img src="assets/profile/bloodbond-preview.jpg" alt="Actual BloodBond prototype preview; displayed donor information is sample data, not a verified live network" width="900"></a>
 
 </details>
 
@@ -98,7 +98,7 @@ These self-hosted graphics are generated from GitHub data. Language share measur
 
 The [layered Ruru illustration](character/ruru.svg) is hand-authored work from an earlier version of this profile. I've kept it, along with the original interactive experiments.
 
-<a href="https://akakrish.github.io/akaKRISH/interactive/character/"><img src="character/ruru.svg" alt="Original layered illustration of Ruru, with glasses, a checked shirt, and a split illuminated ring" width="240" height="288"></a>
+<a href="https://akakrish.github.io/akaKRISH/interactive/character/"><img src="character/ruru.svg" alt="Original layered illustration of Ruru, with glasses, a checked shirt, and a split illuminated ring" width="240"></a>
 
 [Explore the character study](https://akakrish.github.io/akaKRISH/interactive/character/) &nbsp; · &nbsp; [Explore the contribution field](https://akakrish.github.io/akaKRISH/interactive/)
 

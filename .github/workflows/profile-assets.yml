@@ -7,6 +7,9 @@ on:
       - assets/**
       - character/ruru.svg
       - scripts/validate_profile.py
+      - scripts/render_profile.mjs
+      - scripts/encode_profile_gif.py
+      - scripts/preview_profile.mjs
       - scripts/generate_activity.py
       - scripts/test_activity.py
       - .github/workflows/profile-assets.yml

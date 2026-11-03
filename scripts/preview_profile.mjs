@@ -19,7 +19,7 @@ try {
   const page = await browser.newPage();
   await page.goto("https://github.com/akaKRISH/akaKRISH", { waitUntil: "domcontentloaded" });
   const css = await page.locator('link[rel="stylesheet"]').evaluateAll((links) => links.map((link) => link.href));
-  const html = (theme) => `<!doctype html><html lang="en" data-color-mode="${theme}" data-light-theme="light" data-dark-theme="dark"><meta charset="utf-8">${css.map((url)=>`<link rel="stylesheet" href="${url}">`).join("")}<style>body{margin:0;padding:32px 20px;background:var(--bgColor-default,#0d1117)}article.markdown-body{width:100%;max-width:860px;padding:28px;margin:0 auto;border:1px solid var(--borderColor-default,#30363d);border-radius:6px}article img{height:auto;max-width:100%}@media(max-width:600px){body{padding:16px 12px}article.markdown-body{padding:20px 16px}}</style><article class="markdown-body">${rendered}</article></html>`;
+  const html = (theme) => `<!doctype html><html lang="en" data-color-mode="${theme}" data-light-theme="light" data-dark-theme="dark"><meta charset="utf-8">${css.map((url)=>`<link rel="stylesheet" href="${url}">`).join("")}<style>body{margin:0;padding:32px 20px;background:var(--bgColor-default,#0d1117)}article.markdown-body{width:100%;max-width:860px;padding:28px;margin:0 auto;border:1px solid var(--borderColor-default,#30363d);border-radius:6px}article img{max-width:100%}@media(max-width:600px){body{padding:16px 12px}article.markdown-body{padding:20px 16px}}</style><article class="markdown-body">${rendered}</article></html>`;
   let previewHtml = html("dark");
   const types={".png":"image/png",".gif":"image/gif",".jpg":"image/jpeg",".svg":"image/svg+xml"};
   await page.route("https://profile-preview.invalid/**",async(route)=>{
@@ -63,4 +63,36 @@ try {
   assert(final.equals(await hero.screenshot()),"GIF is not stable after its one-shot ending");
   assert.deepEqual(failures,[]);
   console.log("PASS: GitHub-sanitized HTML; desktop/mobile light/dark; all images; reduced motion; mobile Sanskrit; one-shot browser playback; collapsed/expanded layouts");
+
+  if(process.argv.includes("--github")){
+    const url="https://github.com/akaKRISH/akaKRISH/tree/codex/profile-origin";
+    for(const width of [1280,375]){
+      await page.setViewportSize({width,height:900});
+      await page.emulateMedia({reducedMotion:"reduce",colorScheme:"dark"});
+      await page.goto(url,{waitUntil:"networkidle",timeout:60000});
+      const readme=page.locator("article.markdown-body").filter({hasText:"Things I Had to Try"}).first();
+      await readme.waitFor();
+      await readme.scrollIntoViewIfNeeded();
+      await readme.locator("details").evaluateAll(elements=>elements.forEach(element=>{element.open=true}));
+      await readme.locator("img").evaluateAll(images=>Promise.all(images.map(image=>{image.loading="eager";return image.decode()})));
+      const distorted=await readme.locator("img").evaluateAll(images=>images.filter(image=>{const bounds=image.getBoundingClientRect();return bounds.width>0&&bounds.height>0&&image.naturalWidth>0&&Math.abs(bounds.width/bounds.height-image.naturalWidth/image.naturalHeight)>.015}).map(image=>image.alt));
+      assert.deepEqual(distorted,[],`Distorted GitHub images at ${width}px`);
+      assert(await readme.evaluate(element=>element.scrollWidth<=element.clientWidth+1),`GitHub README overflow: ${width}`);
+      const liveHero=readme.getByRole("img",{name:/^I'm Rudransh/});
+      assert(await liveHero.evaluate(image=>image.currentSrc===new URL(image.closest("picture").querySelector("source").srcset,document.baseURI).href),"GitHub did not select the motion fallback");
+      const closing=readme.getByRole("img",{name:/^Bhagavad Gita 2.47:/});
+      assert(await closing.evaluate((image,mobile)=>mobile?image.currentSrc===new URL(image.closest("picture").querySelector("source").srcset,document.baseURI).href:image.currentSrc===image.src,width<600),"GitHub did not select the expected Sanskrit composition");
+      await readme.locator("details").evaluateAll(elements=>elements.forEach(element=>{element.open=false}));
+      await readme.screenshot({path:`shots/github-readme-${width}.png`});
+      if(width===1280){
+        await page.emulateMedia({reducedMotion:"no-preference",colorScheme:"dark"});
+        await liveHero.evaluate(image=>{const url=new URL(image.src);url.searchParams.set("playback-check",Date.now());image.src=url.href;return image.decode()});
+        await liveHero.scrollIntoViewIfNeeded();
+        const first=await liveHero.screenshot();
+        await page.waitForTimeout(1600);
+        assert(!first.equals(await liveHero.screenshot({path:"shots/github-hero-playing.png"})),"GitHub-served GIF did not animate");
+      }
+    }
+    console.log("PASS: real GitHub branch-rendered README; desktop/mobile decoded assets; reduced-motion and mobile picture sources; live GIF playback");
+  }
 }finally{await browser.close();}
