@@ -20,8 +20,19 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/snake/github-contribution-grid-snake.svg?color_snake=%2378c4ff&color_dots=%23161b22%2C%231d4ed8%2C%234f46e5%2C%237c3aed%2C%23a78bfa
-            assets/snake/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2378c4ff
+            assets/snake/github-contribution-grid-snake.svg?color_snake=%238B5CF6&color_dots=%230B0A11%2C%238B5CF6%2C%23F44984%2C%23FF865A%2C%23C9AE78
+            assets/snake/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23F5F0ED&color_dots=%230B0A11%2C%238B5CF6%2C%23F44984%2C%23FF865A%2C%23C9AE78
+
+      - name: Match grid borders to the profile palette
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for path in Path("assets/snake").glob("*.svg"):
+              svg = path.read_text(encoding="utf-8")
+              svg = re.sub(r"(?<=--cb:)[^;}]+", "#F5F0ED26", svg, count=1)
+              path.write_text(svg, encoding="utf-8")
+          PY
 
       - name: Commit generated assets
         run: |

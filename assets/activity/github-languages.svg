@@ -1,29 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="224" viewBox="0 0 420 224">
-<rect width="420" height="224" rx="12" fill="#0F1729" stroke="#1B2638" stroke-width="1"/>
-<text x="24" y="36" fill="#9B8CFF" font-family="Consolas,monospace" font-size="14" font-weight="600">LANGUAGES</text>
-<text x="396" y="36" fill="#94A3B8" font-family="Consolas,monospace" font-size="11" text-anchor="end">by code size</text>
-<line x1="24" y1="46" x2="396" y2="46" stroke="#1B2638" stroke-width="1"/>
-<clipPath id="bar-clip"><rect x="24" y="58" width="372" height="12" rx="6"/></clipPath>
-<g clip-path="url(#bar-clip)">
-<rect x="24" y="58" width="168.516" height="12" fill="#3572A5"/>
-<rect x="192.516" y="58" width="125.73599999999999" height="12" fill="#3178c6"/>
-<rect x="318.25199999999995" y="58" width="30.876000000000005" height="12" fill="#e34c26"/>
-<rect x="349.12799999999993" y="58" width="24.552" height="12" fill="#f1e05a"/>
-<rect x="373.67999999999995" y="58" width="19.344" height="12" fill="#663399"/>
-</g>
-<circle cx="29" cy="86" r="4" fill="#3572A5"/>
-<text x="40" y="90" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">Python</text>
-<text x="396" y="90" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">45.3%</text>
-<circle cx="29" cy="108" r="4" fill="#3178c6"/>
-<text x="40" y="112" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">TypeScript</text>
-<text x="396" y="112" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">33.8%</text>
-<circle cx="29" cy="130" r="4" fill="#e34c26"/>
-<text x="40" y="134" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">HTML</text>
-<text x="396" y="134" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">8.3%</text>
-<circle cx="29" cy="152" r="4" fill="#f1e05a"/>
-<text x="40" y="156" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">JavaScript</text>
-<text x="396" y="156" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">6.6%</text>
-<circle cx="29" cy="174" r="4" fill="#663399"/>
-<text x="40" y="178" fill="#F5F7FA" font-family="Consolas,monospace" font-size="12">CSS</text>
-<text x="396" y="178" fill="#94A3B8" font-family="Consolas,monospace" font-size="12" text-anchor="end">5.2%</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="360" viewBox="0 0 420 360" role="img" aria-labelledby="languages-title languages-description" font-family="Inter,Segoe UI,Arial,sans-serif">
+  <title id="languages-title">Languages by bytes for @akaKRISH</title>
+  <desc id="languages-description">Share of all language bytes in owned public repositories, including forks. Not proficiency.</desc>
+  <rect x="0.5" y="0.5" width="419" height="359" rx="8" fill="#0B0A11" stroke="#F5F0ED" stroke-opacity="0.18" />
+  <text x="24" y="34" fill="#F5F0ED" font-size="17" font-weight="600">Languages by bytes</text>
+  <text x="396" y="34" fill="#F5F0ED" font-size="11" text-anchor="end" opacity="0.7">@akaKRISH</text>
+  <line x1="24" y1="87" x2="396" y2="87" stroke="#F5F0ED" stroke-opacity="0.14" />
+  <line x1="24" y1="316" x2="396" y2="316" stroke="#F5F0ED" stroke-opacity="0.14" />
+  <text x="24" y="339" fill="#F5F0ED" font-size="10" opacity="0.65">Generated 03 Nov 2026, 21:59 UTC</text>
+  <text x="24" y="57" fill="#F5F0ED" font-size="12" opacity="0.8">Code bytes, not proficiency</text>
+  <text x="24" y="75" fill="#F5F0ED" font-size="10" opacity="0.6">All 16 owned public repositories; includes forks</text>
+  <rect x="24.000000" y="107" width="168.420860" height="8" fill="#F44984" opacity="1" />
+  <rect x="192.420860" y="107" width="125.873654" height="8" fill="#8B5CF6" opacity="1" />
+  <rect x="318.294514" y="107" width="31.028195" height="8" fill="#FF865A" opacity="1" />
+  <rect x="349.322709" y="107" width="24.387238" height="8" fill="#C9AE78" opacity="1" />
+  <rect x="373.709947" y="107" width="19.513936" height="8" fill="#F5F0ED" opacity="1" />
+  <rect x="393.223883" y="107" width="2.776117" height="8" fill="#F5F0ED" opacity="0.45" />
+  <rect x="24" y="139" width="7" height="7" rx="2" fill="#F44984" opacity="1" />
+  <text x="42" y="147" fill="#F5F0ED" font-size="12">Python</text>
+  <text x="396" y="147" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">2,161,411 B (45.3%)</text>
+  <rect x="24" y="166" width="7" height="7" rx="2" fill="#8B5CF6" opacity="1" />
+  <text x="42" y="174" fill="#F5F0ED" font-size="12">TypeScript</text>
+  <text x="396" y="174" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">1,615,386 B (33.8%)</text>
+  <rect x="24" y="193" width="7" height="7" rx="2" fill="#FF865A" opacity="1" />
+  <text x="42" y="201" fill="#F5F0ED" font-size="12">HTML</text>
+  <text x="396" y="201" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">398,197 B (8.3%)</text>
+  <rect x="24" y="220" width="7" height="7" rx="2" fill="#C9AE78" opacity="1" />
+  <text x="42" y="228" fill="#F5F0ED" font-size="12">JavaScript</text>
+  <text x="396" y="228" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">312,971 B (6.6%)</text>
+  <rect x="24" y="247" width="7" height="7" rx="2" fill="#F5F0ED" opacity="1" />
+  <text x="42" y="255" fill="#F5F0ED" font-size="12">CSS</text>
+  <text x="396" y="255" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">250,430 B (5.2%)</text>
+  <rect x="24" y="274" width="7" height="7" rx="2" fill="#F5F0ED" opacity="0.45" />
+  <text x="42" y="282" fill="#F5F0ED" font-size="12">Other languages</text>
+  <text x="396" y="282" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">35,627 B (0.7%)</text>
 </svg>

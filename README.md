@@ -1,198 +1,133 @@
-<div align="center">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile/hero-static.png">
+  <img src="assets/profile/hero-assembly.gif" alt="I'm Rudransh. But Ruru works. Four cursors assemble my real portrait. Curiosity into capability." width="1200" height="560">
+</picture>
 
-<p align="center">
-  <sub><b>RURU // ENGINEERING LAB</b></sub>
-</p>
+# Rudransh Singh
 
-<br>
+**Call me Ruru. Computer Science & Engineering student at PSIT, Kanpur.**
 
-<img
-  src="character/ruru.svg"
-  alt="RURU character dossier — a stylized vector portrait standing inside a split neon ring, framed with technical annotations"
-  width="560"
-/>
+I get curious. I take things apart. Then I try putting them back together in ways they weren't meant to work.
 
-<br><br>
+Sometimes that's a computer controlled by hand gestures. Sometimes it's an AI agent that needs to prove it's right. Sometimes it's a website that refuses to behave like one. That's pretty much how I learn.
 
-# RURU
+I'm exploring **computer vision, local-first AI, developer tools, and creative web engineering**. Looking for an internship where I can contribute, ask better questions, and keep building.
 
-### Engineering Student · AI Builder · Systems Thinker
+[Explore my portfolio](https://akakrish.github.io/ruru-portfolio/) &nbsp; · &nbsp; [Let's talk on LinkedIn](https://linkedin.com/in/akaRudransh-Singh) &nbsp; · &nbsp; [GitHub](https://github.com/akaKRISH)
 
-<p align="center">
-  <em>Building intelligent systems, learning deeply, and turning experiments into useful software.</em>
-</p>
+## Things I Had to Try
 
-<br>
+### [GestureOS](https://github.com/akaKRISH/GestureOS)
 
-<p align="center">
-  <a href="https://akakrish.github.io/akaKRISH/interactive/character/"><img src="https://img.shields.io/badge/OPEN_3D_CHARACTER_DOSSIER-78C4FF?style=for-the-badge&labelColor=05070B" alt="Open the interactive 3D character dossier" /></a>
-  &nbsp;
-  <a href="https://akakrish.github.io/akaKRISH/interactive/"><img src="https://img.shields.io/badge/3D_CONTRIBUTION_FIELD-0b1220?style=for-the-badge&labelColor=05070B&logo=three.js&logoColor=78C4FF" alt="Open the 3D contribution field" /></a>
-</p>
+**What if your hands were the interface?** Webcam-based desktop control with hand tracking, explicit interaction states, smoothing, and emergency locking. A [Windows v1.0.0 release](https://github.com/akaKRISH/GestureOS/releases/tag/v1.0.0) is available.
 
-<sub>Hand-drawn layered SVG · pointer-driven parallax · no 3D engine</sub>
+<sub>Python · OpenCV · MediaPipe · PySide6</sub>
 
-</div>
+### [ARCEUS](https://github.com/akaKRISH/arceus-core)
 
-<br>
+**An agent that has to show its working.** Local-first research into metadata retrieval, read-only execution, independent verification, and resource budgets. An experiment with [documented limits](https://github.com/akaKRISH/arceus-core#honest-limitations), not a general autonomous assistant.
 
----
+<sub>Python · SQLite · Ollama</sub>
 
-<br>
+### [PatchPilot](https://github.com/akaKRISH/PatchPilot)
 
-## /currently-building
+**Try the repair. Keep the original.** A local coding-agent MVP that works in a disposable copy, checks baseline and repair tests, and exports a reviewable patch. Its bundled evaluation is deliberately small.
 
-```text
-01  GESTURE OS
-    Touchless spatial computing · Real-time perception · Desktop interaction
+<sub>Python · Ollama · Docker · pytest</sub>
 
-02  RURU OS
-    AI-native personal engineering OS · Automation · Knowledge systems
+### [GDGoC Community Website](https://github.com/akaKRISH/GDGoC-Community-WEBSITE)
 
-03  RURU PROTOCOL
-    Interactive 3D developer portfolio · Three.js · Custom shaders
+**Built with a community, for a community.** My [merged contribution](https://github.com/PSIT-GDGOC/GDGoC-Community-WEBSITE/pull/18) covers event administration and check-in workflows, alongside creative frontend work. [Visit the website](https://gdgoc-community-website.vercel.app).
 
-04  ENGINEERING FOUNDATIONS
-    Data Structures & Algorithms · Python · Java · C++ · Systems design
-```
+<sub>React · TypeScript · Three.js · Express · MongoDB</sub>
 
-<br>
+### [BloodBond](https://github.com/akaKRISH/BloodBond)
 
----
+**A simpler way to search for a donor.** A prototype exploring compatibility, availability, and distance-based matching. The [public preview](https://akakrish.github.io/BloodBond/) uses sample data, not a live donor service.
 
-<br>
+<sub>JavaScript · FastAPI · SQLAlchemy · Python</sub>
 
-## /flagship — Gesture OS
+<details>
+<summary>A look at the actual interfaces</summary>
 
-**[GestureOS](https://github.com/akaKRISH/GestureOS)** transforms standard webcam feeds into a responsive, touchless desktop interaction layer. Built with on-device computer vision and low-latency event dispatching, it enables spatial navigation without proprietary hardware.
+**GDGoC Community Website** · Public website capture
 
-### Perception & Architecture
-* **Perception Layer:** 21 3D Hand Landmarks, 468 Face Mesh Points, 6-DoF Head Pose estimation via PnP, and 1€ Temporal Jitter Filtering.
-* **Multimodal Fusion:** Real-time geometric and dynamic classification with velocity vectors and pinch metrics.
-* **Safety State Machine:** Face-presence verification, dwell-time confirmation, and fail-safe emergency disengage triggers.
-* **Dispatch Engine:** Native OS input injection (Mouse/Keyboard), HUD overlay system, and sandboxed plugin architecture.
+<a href="https://gdgoc-community-website.vercel.app"><img src="assets/profile/gdgoc-preview.jpg" alt="Actual GDGoC community website: Learn, Connect, Grow, with the community mascot and event navigation" width="900" height="625"></a>
 
-### Core Capabilities
-* **25+ Gesture Vocabulary:** Precision pointing, pinch-drag, inertial scroll, window management, media controls, and macro triggers.
-* **AirMouse:** Inertial cursor control with dynamic sensitivity damping for pixel-accurate targeting.
-* **Privacy-First:** 100% on-device vision inference — zero video frames or telemetry leave the local machine.
-* **Extensibility:** Built-in Gesture Studio, plugin SDK, and full developer packaging pipeline.
+**BloodBond** · Prototype capture with sample data
 
-<div align="center">
+<a href="https://akakrish.github.io/BloodBond/"><img src="assets/profile/bloodbond-preview.jpg" alt="Actual BloodBond prototype preview; displayed donor information is sample data, not a verified live network" width="900" height="625"></a>
 
-[**Explore the GestureOS Repository & Architecture →**](https://github.com/akaKRISH/GestureOS)
+</details>
 
-</div>
+## Tools I Reach For
 
-<br>
+| Area | Working with |
+| :--- | :--- |
+| Programming | Python, Java, JavaScript, TypeScript |
+| Frontend | React, Tailwind CSS, Vite, Motion, Three.js |
+| Backend | Node.js, Express, FastAPI, SQLAlchemy |
+| Local AI & vision | OpenCV, MediaPipe, Ollama, local model integration |
+| Engineering | Git, GitHub Actions, Docker, pytest |
 
----
+I'm building fluency through the projects above and [algorithm practice](https://github.com/akaKRISH/LeetCode).
 
-<br>
+## Away From the Editor
 
-## /selected-work
+Sprinting gets me out of my head. Psychology, history, and strategy tend to pull me back in. Philosophy keeps me asking which questions are worth the effort, and Krishna's teachings remind me to focus on the work in front of me.
 
-* **[GestureOS](https://github.com/akaKRISH/GestureOS)** — *(Flagship)* Touchless desktop automation, computer vision perception, and 3D spatial UI.
-* **[ARCEUS](https://github.com/akaKRISH/arceus-core)** — Local-first cognitive-agent research framework: memory, verified skills, and budgeted routing. Honest benchmarking, negative results included.
-* **[RuruOS](https://github.com/akaKRISH/RuruOS)** — AI-native personal engineering environment for automation, research, and developer workflows.
-* **[ruru-protocol](https://github.com/akaKRISH/ruru-protocol)** — Cinematic developer portfolio powered by React, Three.js, and custom shader engines.
-* **[Groundwater Prediction System](https://github.com/akaKRISH/GROUNDWATER_PREDICITION_SYSTEM)** — Environmental data modeling and machine learning prediction pipeline.
-* **[LeetCode Practice](https://github.com/akaKRISH/LeetCode)** — Algorithmic problem solving, data structures, and computational optimization in C++.
+<details>
+<summary>A little activity, not a scoreboard</summary>
 
-<br>
+These self-hosted graphics are generated from GitHub data. Language share measures repository code size, not expertise.
 
----
+<img src="assets/activity/github-overview.svg" alt="GitHub activity summary with its generation date" width="420">
 
-<br>
-
-## /stack
-
-**Languages**<br>
-`Python` · `Java` · `C++` · `TypeScript` · `JavaScript` · `HTML/CSS`
-
-**AI & Computer Vision**<br>
-`OpenCV` · `MediaPipe` · `PyTorch` · `Scikit-Learn` · `LLMs & AI Agents`
-
-**Systems & Web**<br>
-`React` · `Three.js` · `Qt / PySide6` · `Git` · `GitHub Actions` · `Linux` · `Docker`
-
-<br>
-
----
-
-<br>
-
-## /engineering-journey
-
-I am an engineering student focused on **intelligent interfaces, software systems, computer vision, and applied AI**.
-
-I learn through intentional building: creating prototypes, developer tools, spatial interaction systems, and experiments that force me to understand how computing systems operate from first principles.
-
-> **Learn deeply. Build boldly. Think beyond the obvious.**
-
-<br>
-
----
-
-<br>
-
-## /lab — this repository is itself an artifact
-
-The character dossier above is not a stock image. It is a hand-authored,
-layered SVG in [`character/ruru.svg`](character/ruru.svg), split into seven
-depth planes and rebuilt for this profile — and the interactive card runs on
-plain CSS transforms plus a few hundred bytes of JavaScript.
-
-<div align="center">
-
-<a href="https://akakrish.github.io/akaKRISH/interactive/character/">
-  <img src="assets/3d/profile-night-green.svg" alt="3D contribution field" width="100%" />
-</a>
-
-<a href="https://akakrish.github.io/akaKRISH/interactive/character/">
-  <img src="https://img.shields.io/badge/ENTER_THE_LAB-%E2%86%92-78C4FF?style=for-the-badge&labelColor=05070B" alt="Enter the lab" />
-</a>
-
-</div>
-
-<br>
-
----
-
-<br>
-
-## /activity
-
-<div align="center">
-
-<a href="https://github.com/akaKRISH">
-  <img src="assets/activity/github-overview.svg" alt="GitHub Overview" />
-</a>
-&nbsp;&nbsp;
-<a href="https://github.com/akaKRISH">
-  <img src="assets/activity/github-languages.svg" alt="Language Distribution" />
-</a>
+<img src="assets/activity/github-languages.svg" alt="Languages in public repositories by code size, not a measure of proficiency" width="420">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/snake/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/snake/github-contribution-grid-snake.svg">
-  <img alt="Contribution Snake" src="assets/snake/github-contribution-grid-snake-dark.svg" width="100%" />
+  <img src="assets/snake/github-contribution-grid-snake-dark.svg" alt="Animated snake tracing my contribution grid" width="100%">
 </picture>
 
-</div>
+</details>
+
+<details>
+<summary>The original artwork still has a home</summary>
+
+The [layered Ruru illustration](character/ruru.svg) is hand-authored work from an earlier version of this profile. I've kept it, along with the original interactive experiments.
+
+<a href="https://akakrish.github.io/akaKRISH/interactive/character/"><img src="character/ruru.svg" alt="Original layered illustration of Ruru, with glasses, a checked shirt, and a split illuminated ring" width="240" height="288"></a>
+
+[Explore the character study](https://akakrish.github.io/akaKRISH/interactive/character/) &nbsp; · &nbsp; [Explore the contribution field](https://akakrish.github.io/akaKRISH/interactive/)
+
+<a href="https://akakrish.github.io/akaKRISH/interactive/"><img src="assets/3d/profile-night-green.svg" alt="Original three-dimensional contribution-field illustration" width="100%"></a>
+
+</details>
 
 <br>
 
----
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/closing-mobile.png">
+  <img src="assets/profile/closing.png" alt="Bhagavad Gita 2.47: You have the right to action alone, never to its fruits. Do not make the fruits of action your motive, nor be attached to inaction. Curiosity into capability. Rudransh Singh. Ruru." width="1200">
+</picture>
 
-<div align="center">
+<details>
+<summary>Bhagavad Gita 2.47 · Read the verse and meaning</summary>
 
-[GitHub](https://github.com/akaKRISH) &nbsp;·&nbsp; [GestureOS](https://github.com/akaKRISH/GestureOS) &nbsp;·&nbsp; [ARCEUS](https://github.com/akaKRISH/arceus-core) &nbsp;·&nbsp; [Character Dossier](https://akakrish.github.io/akaKRISH/interactive/character/) &nbsp;·&nbsp; [Contribution Field](https://akakrish.github.io/akaKRISH/interactive/)
+कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।
 
-<br>
+मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
 
-<code>RURU // building intelligent systems one layer at a time.</code>
+You have the right to action alone, never to its fruits. Do not make the fruits of action your motive, nor be attached to inaction.
 
-<br>
+[Bhagavad Gita, Chapter 2, Verse 47](https://www.holy-bhagavad-gita.org/chapter/2/verse/47/)
 
-</div>
+**Curiosity into capability.**
+
+**Rudransh Singh**
+
+*Ruru*
+
+</details>
