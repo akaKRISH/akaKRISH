@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Contribution field</title>
+  <desc id="desc">Original editorial artwork for Rudransh Singh's GitHub profile. Project diagrams are conceptual studies, not application screenshots.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.serif{font-family:Georgia,serif;font-style:italic}.trace{stroke-dasharray:16 24;animation:flow 8s linear infinite}.drift{animation:drift 7s ease-in-out infinite}.scan{animation:scan 9s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-160}}@keyframes drift{50%{transform:translateY(-10px)}}@keyframes scan{50%{transform:translateX(90px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+  <rect width="1200" height="260" fill="#0B0A11" />
+  <text x="48" y="52" font-size="25" fill="#8B5CF6">03   THE WORK, OVER TIME</text>
+  <text x="45" y="145" font-size="91" fill="#F5F0ED">Contribution</text>
+  <text x="648" y="145" font-size="84" fill="#B89AF5" class="serif">field.</text>
+  <text x="50" y="210" font-size="25" fill="#BEB4CB">Real contributions, seen from a different angle.</text>
+  <g transform="translate(1110 205) scale(0.8)" stroke="#8B5CF6" stroke-width="3">
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#8B5CF6" stroke-width="3" />
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#8B5CF6" stroke-width="3" />
+    <line x1="-13" y1="-13" x2="13" y2="13" stroke="#8B5CF6" stroke-width="3" />
+    <line x1="-13" y1="13" x2="13" y2="-13" stroke="#8B5CF6" stroke-width="3" />
+  </g>
+  <line x1="48" y1="246" x2="1152" y2="246" stroke="#39313F" />
+  <path d="M48 246H1152" stroke="#8B5CF6" fill="none" stroke-width="3" class="trace" />
+</svg>

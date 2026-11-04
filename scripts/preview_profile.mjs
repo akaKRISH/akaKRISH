@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
 import { resolve, extname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
@@ -7,6 +7,7 @@ import { chromium } from "@playwright/test";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 process.chdir(root);
+const branch = execFileSync("git", ["branch", "--show-current"], { encoding: "utf8" }).trim();
 await mkdir("shots", { recursive: true });
 const rendered = execFileSync("gh", ["api", "markdown", "--method", "POST", "-f", "mode=gfm", "-f", "context=akaKRISH/akaKRISH", "-F", "text=@README.md"], { encoding: "utf8", maxBuffer: 2_000_000 });
 assert(!/<script\b|<iframe\b|<canvas\b/i.test(rendered));
@@ -31,6 +32,22 @@ try {
   });
   const failures=[];
   page.on("pageerror",error=>failures.push(error.message));
+  async function checkPromotedVisuals(scope, width){
+    for(const name of [/^Animated snake tracing/, /^My real generated GitHub contribution field/, /^GitHub activity summary/, /^Languages in public repositories/]){
+      const image=scope.getByRole("img",{name}).first();
+      assert(await image.evaluate(element=>!element.closest("details")),"Contribution visual is hidden in details");
+      assert(await image.isVisible(),"Contribution visual is not visible");
+    }
+    const sources=scope.locator('picture source[media="(max-width: 600px)"]');
+    for(const source of await sources.all()){
+      assert(await source.evaluate((element,mobile)=>{
+        const image=element.closest("picture").querySelector("img");
+        return image.currentSrc===(mobile?new URL(element.srcset,document.baseURI).href:image.src);
+      },width<600),"Wrong responsive artwork selected");
+    }
+    const field=scope.getByRole("img",{name:/^My real generated GitHub contribution field/});
+    assert(await field.evaluate(image=>image.currentSrc===new URL(image.closest("picture").querySelector("source").srcset,document.baseURI).href),"3D field ignores reduced-motion source");
+  }
   for(const [width,theme] of [[1280,"dark"],[375,"dark"],[375,"light"],[1280,"light"]]){
     previewHtml=html(theme);
     await page.setViewportSize({width,height:900});
@@ -41,6 +58,7 @@ try {
     assert((await page.locator('img[src$="hero-assembly.gif"]').evaluate(image=>image.currentSrc)).endsWith("hero-static.png"));
     assert((await page.locator('img[src$="closing.png"]').evaluate(image=>image.currentSrc)).endsWith(width<600?"closing-mobile.png":"closing.png"));
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`Horizontal overflow: ${width} ${theme}`);
+    await checkPromotedVisuals(page,width);
     await page.screenshot({path:`shots/readme-${width}-${theme}.png`,fullPage:true});
     for(const summary of await page.locator("summary").all()) await summary.click();
     await page.locator("img").evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
@@ -79,17 +97,63 @@ try {
   }
   console.log("PASS: both snake SVGs freeze for reduced motion and animate normally otherwise");
 
+  await mkdir("shots/showcase",{recursive:true});
+  const artwork=(await readdir("assets/profile")).filter(name=>name.endsWith(".svg"));
+  for(const name of artwork){
+    await page.emulateMedia({reducedMotion:"reduce"});
+    await page.setViewportSize({width:name.includes("-mobile")?720:1200,height:1500});
+    await page.goto(`https://profile-preview.invalid/assets/profile/${name}`,{waitUntil:"networkidle"});
+    const clipped=await page.locator("text").evaluateAll(elements=>elements.filter(element=>{
+      const box=element.getBoundingClientRect(),root=element.ownerSVGElement.getBoundingClientRect();
+      return box.left<root.left-1||box.right>root.right+1||box.top<root.top-1||box.bottom>root.bottom+1;
+    }).map(element=>element.textContent));
+    assert.deepEqual(clipped,[],`Artwork text clips: ${name}`);
+    assert.equal(await page.evaluate(()=>document.getAnimations().length),0,`Artwork ignores reduced motion: ${name}`);
+    const frame=await page.locator("svg").screenshot({path:`shots/showcase/${name}.png`});
+    await page.waitForTimeout(250);
+    assert(frame.equals(await page.locator("svg").screenshot()),`Reduced-motion artwork still moves: ${name}`);
+    if(name!=="quiet.svg"){
+      await page.emulateMedia({reducedMotion:"no-preference"});
+      assert(await page.evaluate(()=>document.getAnimations().length>0),`Missing artwork motion: ${name}`);
+      const before=await page.locator("svg").screenshot();
+      await page.waitForTimeout(400);
+      assert(!before.equals(await page.locator("svg").screenshot()),`Artwork motion is blank: ${name}`);
+    }
+  }
+  console.log(`PASS: ${artwork.length} responsive SVG compositions; text bounds; reduced-motion stability and normal animated pixels`);
+
+  await page.setViewportSize({width:1280,height:900});
+  await page.emulateMedia({reducedMotion:"reduce"});
+  await page.goto("https://profile-preview.invalid/assets/3d/profile-night-rainbow-static.svg",{waitUntil:"networkidle"});
+  assert.equal(await page.locator("animate, animateTransform, animateMotion").count(),0);
+  const colored=await page.locator("rect").evaluateAll(elements=>elements.filter(element=>{
+    const fill=getComputedStyle(element).fill;
+    return fill!=="rgb(0, 0, 0)"&&fill!=="none";
+  }).length);
+  assert(colored>300,"Static contribution field lost its visible blocks");
+  const staticField=await page.locator("svg").screenshot({path:"shots/showcase/contributions-static.png"});
+  await page.waitForTimeout(500);
+  assert(staticField.equals(await page.locator("svg").screenshot()),"Static contribution field is not static");
+  await page.emulateMedia({reducedMotion:"no-preference"});
+  await page.goto("https://profile-preview.invalid/assets/3d/profile-night-rainbow.svg",{waitUntil:"networkidle"});
+  await page.locator("svg").evaluate(svg=>{svg.pauseAnimations();svg.setCurrentTime(5)});
+  const animatedField=await page.locator("svg").screenshot({path:"shots/showcase/contributions-animated.png"});
+  await page.locator("svg").evaluate(svg=>svg.setCurrentTime(7));
+  assert(!animatedField.equals(await page.locator("svg").screenshot()),"3D contribution field does not animate");
+  console.log("PASS: real 3D contribution animation and nonblank, stable reduced-motion snapshot");
+
   if(process.argv.includes("--github")){
-    const url="https://github.com/akaKRISH/akaKRISH/tree/codex/profile-origin";
+    const url=`https://github.com/akaKRISH/akaKRISH/tree/${branch.split("/").map(encodeURIComponent).join("/")}`;
     for(const width of [1280,375]){
       await page.setViewportSize({width,height:900});
       await page.emulateMedia({reducedMotion:"reduce",colorScheme:"dark"});
       await page.goto(url,{waitUntil:"networkidle",timeout:60000});
-      const readme=page.locator("article.markdown-body").filter({hasText:"Things I Had to Try"}).first();
+      const readme=page.locator("article.markdown-body").filter({hasText:"Selected Experiments"}).first();
       await readme.waitFor();
       await readme.scrollIntoViewIfNeeded();
       await readme.locator("details").evaluateAll(elements=>elements.forEach(element=>{element.open=true}));
       await readme.locator("img").evaluateAll(images=>Promise.all(images.map(image=>{image.loading="eager";return image.decode()})));
+      await checkPromotedVisuals(readme,width);
       const distorted=await readme.locator("img").evaluateAll(images=>images.filter(image=>{const bounds=image.getBoundingClientRect();return bounds.width>0&&bounds.height>0&&image.naturalWidth>0&&Math.abs(bounds.width/bounds.height-image.naturalWidth/image.naturalHeight)>.015}).map(image=>image.alt));
       assert.deepEqual(distorted,[],`Distorted GitHub images at ${width}px`);
       assert(await readme.evaluate(element=>element.scrollWidth<=element.clientWidth+1),`GitHub README overflow: ${width}`);

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">patchpilot project study</title>
+  <desc id="desc">Original editorial artwork for Rudransh Singh's GitHub profile. Project diagrams are conceptual studies, not application screenshots.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.serif{font-family:Georgia,serif;font-style:italic}.trace{stroke-dasharray:16 24;animation:flow 8s linear infinite}.drift{animation:drift 7s ease-in-out infinite}.scan{animation:scan 9s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-160}}@keyframes drift{50%{transform:translateY(-10px)}}@keyframes scan{50%{transform:translateX(90px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+  <rect width="1200" height="440" fill="#0B0A11" />
+  <text x="40" y="49" font-size="26" fill="#FF865A">03</text>
+  <text x="100" y="49" font-size="24" fill="#BEB4CB">REVIEWABLE CODE REPAIR</text>
+  <text x="37" y="150" font-size="76" fill="#F5F0ED">Try the repair.</text>
+  <text x="37" y="228" font-size="76" fill="#FF865A" class="serif">Keep the original.</text>
+  <text x="42" y="410" font-size="23" fill="#BEB4CB">COPY  &gt;  TEST  &gt;  REVIEW</text>
+  <line x1="40" y1="368" x2="1160" y2="368" stroke="#39313F" />
+  <g transform="translate(725 77) scale(.75)">
+    <line x1="25" y1="50" x2="545" y2="50" stroke="#453841" stroke-width="3" />
+    <path d="M25 50H545" stroke="#BEB4CB" fill="none" stroke-width="3" />
+    <rect x="47" y="42" width="16" height="16" fill="#0B0A11" stroke="#BEB4CB" stroke-width="3" />
+    <rect x="267" y="42" width="16" height="16" fill="#0B0A11" stroke="#BEB4CB" stroke-width="3" />
+    <rect x="492" y="42" width="16" height="16" fill="#0B0A11" stroke="#BEB4CB" stroke-width="3" />
+    <text x="25" y="20" font-size="29" fill="#BEB4CB">original</text>
+    <line x1="25" y1="235" x2="545" y2="235" stroke="#453841" stroke-width="3" />
+    <path d="M25 235H545" stroke="#FF865A" fill="none" stroke-width="3" class="trace" />
+    <rect x="47" y="227" width="16" height="16" fill="#0B0A11" stroke="#FF865A" stroke-width="3" />
+    <rect x="267" y="227" width="16" height="16" fill="#0B0A11" stroke="#FF865A" stroke-width="3" />
+    <rect x="492" y="227" width="16" height="16" fill="#0B0A11" stroke="#FF865A" stroke-width="3" />
+    <text x="25" y="205" font-size="29" fill="#FF865A">working copy</text>
+    <path d="M55 50V235M500 235V50" stroke="#F44984" fill="none" stroke-width="3" stroke-dasharray="4 8" />
+    <path d="M253 236l15 15 33 -37" stroke="#F5F0ED" fill="none" stroke-width="3" stroke-linejoin="round" />
+  </g>
+  <text x="43" y="313" font-size="25" fill="#BEB4CB">A disposable copy. A patch you can inspect.</text>
+</svg>

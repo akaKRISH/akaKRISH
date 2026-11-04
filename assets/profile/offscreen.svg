@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="310" viewBox="0 0 1200 310" role="img" aria-labelledby="title desc">
+  <title id="title">Away from the editor</title>
+  <desc id="desc">Original editorial artwork for Rudransh Singh's GitHub profile. Project diagrams are conceptual studies, not application screenshots.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.serif{font-family:Georgia,serif;font-style:italic}.trace{stroke-dasharray:16 24;animation:flow 8s linear infinite}.drift{animation:drift 7s ease-in-out infinite}.scan{animation:scan 9s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-160}}@keyframes drift{50%{transform:translateY(-10px)}}@keyframes scan{50%{transform:translateX(90px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+  <rect width="1200" height="310" fill="#0B0A11" />
+  <text x="44" y="53" font-size="25" fill="#F44984">04   AWAY FROM THE EDITOR</text>
+  <text x="40" y="134" font-size="69" fill="#F5F0ED">Fast feet.</text>
+  <text x="40" y="210" font-size="69" fill="#FF865A" class="serif">Restless mind.</text>
+  <g transform="translate(760 26) scale(.9)">
+    <path d="M20 40H270Q360 40 360 130V270" stroke="#FF865A" fill="none" stroke-width="3" />
+    <path d="M20 80H270Q360 80 360 170V270" stroke="#F44984" fill="none" stroke-width="3" />
+    <path d="M20 120H270Q360 120 360 210V270" stroke="#8B5CF6" fill="none" stroke-width="3" />
+    <path d="M20 80H270Q360 80 360 170V270" stroke="#F5F0ED" fill="none" stroke-width="3" class="trace" />
+    <g transform="translate(70 230) scale(1)" stroke="#C9AE78" stroke-width="3">
+      <line x1="-18" y1="0" x2="18" y2="0" stroke="#C9AE78" stroke-width="3" />
+      <line x1="0" y1="-18" x2="0" y2="18" stroke="#C9AE78" stroke-width="3" />
+      <line x1="-13" y1="-13" x2="13" y2="13" stroke="#C9AE78" stroke-width="3" />
+      <line x1="-13" y1="13" x2="13" y2="-13" stroke="#C9AE78" stroke-width="3" />
+    </g>
+  </g>
+</svg>
