@@ -39,6 +39,9 @@ jobs:
           cp profile-3d-contrib/profile-gitblock.svg assets/3d/profile-gitblock.svg
           rm -rf profile-3d-contrib
 
+      - name: Freeze a reduced-motion contribution field
+        run: python scripts/freeze_contributions.py
+
       - name: Commit generated assets
         if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
         run: |

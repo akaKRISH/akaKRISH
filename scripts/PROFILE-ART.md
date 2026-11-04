@@ -2,7 +2,29 @@
 
 This work changes the GitHub profile README and its supporting assets only. It does not add an application, JavaScript to the README, or another website. `interactive/`, `character/ruru.svg`, the existing Pages deployment, and the 3D contribution generator are preserved.
 
-## Rebuild
+## Lower-Half Visual Showcase
+
+The follow-up visual redesign preserves the opening README section through its contact links and the complete Gita ending byte-for-byte. `test_showcase.py` locks those text regions and the five original portrait/hero/closing assets by SHA-256. The existing portrait renderer is intentionally not rerun for lower-half work.
+
+```sh
+python scripts/render_showcase.py
+python scripts/render_toolkit.py
+python scripts/freeze_contributions.py
+python scripts/validate_profile.py
+python -m unittest discover -s scripts -p "test_*.py" -v
+node scripts/preview_profile.mjs
+node scripts/preview_profile.mjs --github
+```
+
+The two new artwork renderers use only the Python standard library and produce 15 self-contained SVG compositions, with independent desktop/mobile layouts. They use native system sans/serif typography, the existing dark/violet/rose/orange/ivory palette, and restrained gold. Animated traces decorate the work masthead, project-specific studies, toolkit, contribution heading, and running-track study. Text and data never blink or disappear. All decorative motion stops through `prefers-reduced-motion`; the gold transition before the Gita is static.
+
+GestureOS, ARCEUS, and PatchPilot artwork is clearly described as concept/process studies, not fabricated product screenshots. The actual GDGoC and BloodBond captures are now visible directly beside their project descriptions, with collaboration and sample-data limitations retained. The toolkit contains the same 20 real technologies, without proficiency bars or a badge wall.
+
+The real generated snake, 3D rainbow contribution field, and both activity cards are visible outside disclosures. The 3D field's reduced-motion source preserves the generated final geometry and explicitly freezes a declared violet color phase, avoiding black blocks when SMIL fill animations are removed. The existing 3D workflow refreshes that static derivative on every generation. It does not invent or alter contribution data. The byte-share language card and the 3D commit-by-repository-language breakdown measure different things; README identifies that distinction.
+
+Browser QA selects the current Git branch automatically, checks every new SVG's text bounds and animated pixels, confirms static reduced-motion output and responsive picture selection, and verifies promoted visuals are not hidden in disclosures. At 1280px/375px, GitHub-sanitized and actual GitHub markup are checked for image aspect ratios and overflow. GitHub controls Markdown typography and spacing; SVG internals cannot provide application interactions, custom hover controls, or selectable text. Alt text and native project descriptions retain the essential content.
+
+## Rebuild the Original Hero
 
 Node.js, Google Chrome, Python 3, and Pillow are needed for local artwork generation. Install the rendering tools explicitly in this checkout, not an ancestor project:
 

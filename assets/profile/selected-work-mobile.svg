@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="330" viewBox="0 0 720 330" role="img" aria-labelledby="title desc">
+  <title id="title">Selected experiments</title>
+  <desc id="desc">Original editorial artwork for Rudransh Singh's GitHub profile. Project diagrams are conceptual studies, not application screenshots.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.serif{font-family:Georgia,serif;font-style:italic}.trace{stroke-dasharray:16 24;animation:flow 8s linear infinite}.drift{animation:drift 7s ease-in-out infinite}.scan{animation:scan 9s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-160}}@keyframes drift{50%{transform:translateY(-10px)}}@keyframes scan{50%{transform:translateX(90px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+  <rect width="720" height="330" fill="#0B0A11" />
+  <text x="48" y="52" font-size="25" fill="#F44984">01   SELECTED EXPERIMENTS</text>
+  <text x="44" y="137" font-size="70" fill="#F5F0ED">Curiosity,</text>
+  <text x="44" y="216" font-size="70" fill="#FF865A" class="serif">made tangible.</text>
+  <line x1="48" y1="282" x2="670" y2="282" stroke="#39313F" />
+  <path d="M48 282H670" stroke="#F44984" fill="none" stroke-width="3" class="trace" />
+</svg>

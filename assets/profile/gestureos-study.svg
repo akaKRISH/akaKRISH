@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">gestureos project study</title>
+  <desc id="desc">Original editorial artwork for Rudransh Singh's GitHub profile. Project diagrams are conceptual studies, not application screenshots.</desc>
+  <style>text{font-family:Arial,Helvetica,sans-serif;letter-spacing:0}.serif{font-family:Georgia,serif;font-style:italic}.trace{stroke-dasharray:16 24;animation:flow 8s linear infinite}.drift{animation:drift 7s ease-in-out infinite}.scan{animation:scan 9s ease-in-out infinite}@keyframes flow{to{stroke-dashoffset:-160}}@keyframes drift{50%{transform:translateY(-10px)}}@keyframes scan{50%{transform:translateX(90px)}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+  <rect width="1200" height="440" fill="#0B0A11" />
+  <text x="40" y="49" font-size="26" fill="#F44984">01</text>
+  <text x="100" y="49" font-size="24" fill="#BEB4CB">VISION TO INTERACTION</text>
+  <text x="37" y="150" font-size="76" fill="#F5F0ED">Hands.</text>
+  <text x="37" y="228" font-size="76" fill="#F44984" class="serif">On.</text>
+  <text x="42" y="410" font-size="23" fill="#BEB4CB">TRACK  &gt;  SMOOTH  &gt;  ACT</text>
+  <line x1="40" y1="368" x2="1160" y2="368" stroke="#39313F" />
+  <g transform="translate(680 40) scale(.93)">
+    <path d="M124 271 L80 222 L51 187 L28 157" stroke="#F44984" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="120" y="267" width="8" height="8" fill="#F5F0ED" />
+    <rect x="76" y="218" width="8" height="8" fill="#F5F0ED" />
+    <rect x="47" y="183" width="8" height="8" fill="#F5F0ED" />
+    <rect x="24" y="153" width="8" height="8" fill="#F5F0ED" />
+    <path d="M124 271 L111 173 L109 111 L109 59 L109 19" stroke="#F44984" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="120" y="267" width="8" height="8" fill="#F5F0ED" />
+    <rect x="107" y="169" width="8" height="8" fill="#F5F0ED" />
+    <rect x="105" y="107" width="8" height="8" fill="#F5F0ED" />
+    <rect x="105" y="55" width="8" height="8" fill="#F5F0ED" />
+    <rect x="105" y="15" width="8" height="8" fill="#F5F0ED" />
+    <path d="M124 271 L157 166 L161 92 L163 41 L164 2" stroke="#F44984" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="120" y="267" width="8" height="8" fill="#F5F0ED" />
+    <rect x="153" y="162" width="8" height="8" fill="#F5F0ED" />
+    <rect x="157" y="88" width="8" height="8" fill="#F5F0ED" />
+    <rect x="159" y="37" width="8" height="8" fill="#F5F0ED" />
+    <rect x="160" y="-2" width="8" height="8" fill="#F5F0ED" />
+    <path d="M124 271 L202 181 L218 115 L226 68 L229 38" stroke="#F44984" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="120" y="267" width="8" height="8" fill="#F5F0ED" />
+    <rect x="198" y="177" width="8" height="8" fill="#F5F0ED" />
+    <rect x="214" y="111" width="8" height="8" fill="#F5F0ED" />
+    <rect x="222" y="64" width="8" height="8" fill="#F5F0ED" />
+    <rect x="225" y="34" width="8" height="8" fill="#F5F0ED" />
+    <path d="M124 271 L244 211 L278 161 L298 127 L310 104" stroke="#F44984" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="120" y="267" width="8" height="8" fill="#F5F0ED" />
+    <rect x="240" y="207" width="8" height="8" fill="#F5F0ED" />
+    <rect x="274" y="157" width="8" height="8" fill="#F5F0ED" />
+    <rect x="294" y="123" width="8" height="8" fill="#F5F0ED" />
+    <rect x="306" y="100" width="8" height="8" fill="#F5F0ED" />
+    <path d="M28 157L109 19L164 2L229 38L310 104" stroke="#4C2D42" fill="none" stroke-width="3" stroke-dasharray="5 8" />
+    <line x1="0" y1="321" x2="350" y2="321" stroke="#4C2D42" />
+    <path d="M0 321H350" stroke="#FF865A" fill="none" stroke-width="3" class="trace" />
+    <path d="M22 0H0V22" stroke="#8B5CF6" fill="none" stroke-width="3" />
+    <path d="M328 0H350V22" stroke="#8B5CF6" fill="none" stroke-width="3" />
+    <path d="M22 340H0V318" stroke="#8B5CF6" fill="none" stroke-width="3" />
+    <path d="M328 340H350V318" stroke="#8B5CF6" fill="none" stroke-width="3" />
+  </g>
+  <text x="44" y="313" font-size="25" fill="#BEB4CB">A webcam. A hand. A different interface.</text>
+  <g transform="translate(497 142) scale(1)" stroke="#FF865A" stroke-width="3">
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#FF865A" stroke-width="3" />
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#FF865A" stroke-width="3" />
+    <line x1="-13" y1="-13" x2="13" y2="13" stroke="#FF865A" stroke-width="3" />
+    <line x1="-13" y1="13" x2="13" y2="-13" stroke="#FF865A" stroke-width="3" />
+  </g>
+</svg>

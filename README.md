@@ -15,75 +15,85 @@ I'm exploring **computer vision, local-first AI, developer tools, and creative w
 
 [Explore my portfolio](https://akakrish.github.io/ruru-portfolio/) &nbsp; · &nbsp; [Let's talk on LinkedIn](https://linkedin.com/in/akaRudransh-Singh) &nbsp; · &nbsp; [GitHub](https://github.com/akaKRISH)
 
-## Things I Had to Try
+## Selected Experiments
 
-### [GestureOS](https://github.com/akaKRISH/GestureOS)
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/selected-work-mobile.svg">
+  <img src="assets/profile/selected-work.svg" alt="Selected experiments. Curiosity, made tangible. Intelligent systems, real interfaces, and five things I had to try." width="1200">
+</picture>
+
+### [01 · GestureOS](https://github.com/akaKRISH/GestureOS)
+
+<a href="https://github.com/akaKRISH/GestureOS">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/profile/gestureos-study-mobile.svg">
+    <img src="assets/profile/gestureos-study.svg" alt="GestureOS concept study, not a screenshot: hand landmarks become tracking, smoothing, and desktop interaction. Hands. On." width="1200">
+  </picture>
+</a>
 
 **What if your hands were the interface?** Webcam-based desktop control with hand tracking, explicit interaction states, smoothing, and emergency locking. A [Windows v1.0.0 release](https://github.com/akaKRISH/GestureOS/releases/tag/v1.0.0) is available.
 
 <sub>Python · OpenCV · MediaPipe · PySide6</sub>
 
-### [ARCEUS](https://github.com/akaKRISH/arceus-core)
+### [02 · ARCEUS](https://github.com/akaKRISH/arceus-core)
+
+<a href="https://github.com/akaKRISH/arceus-core">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/profile/arceus-study-mobile.svg">
+    <img src="assets/profile/arceus-study.svg" alt="ARCEUS concept study, not a screenshot: sources, independent checking, and reasoning. Research, with receipts." width="1200">
+  </picture>
+</a>
 
 **An agent that has to show its working.** Local-first research into metadata retrieval, read-only execution, independent verification, and resource budgets. An experiment with [documented limits](https://github.com/akaKRISH/arceus-core#honest-limitations), not a general autonomous assistant.
 
 <sub>Python · SQLite · Ollama</sub>
 
-### [PatchPilot](https://github.com/akaKRISH/PatchPilot)
+### [03 · PatchPilot](https://github.com/akaKRISH/PatchPilot)
+
+<a href="https://github.com/akaKRISH/PatchPilot">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/profile/patchpilot-study-mobile.svg">
+    <img src="assets/profile/patchpilot-study.svg" alt="PatchPilot concept study, not a screenshot: a separate working copy is tested and returns a reviewable patch while preserving the original." width="1200">
+  </picture>
+</a>
 
 **Try the repair. Keep the original.** A local coding-agent MVP that works in a disposable copy, checks baseline and repair tests, and exports a reviewable patch. Its bundled evaluation is deliberately small.
 
 <sub>Python · Ollama · Docker · pytest</sub>
 
-### [GDGoC Community Website](https://github.com/akaKRISH/GDGoC-Community-WEBSITE)
+### [04 · GDGoC Community Website](https://github.com/akaKRISH/GDGoC-Community-WEBSITE)
+
+<a href="https://gdgoc-community-website.vercel.app"><img src="assets/profile/gdgoc-preview.jpg" alt="Actual GDGoC community website: Learn, Connect, Grow, with the community mascot and event navigation" width="1200"></a>
 
 **Built with a community, for a community.** My [merged contribution](https://github.com/PSIT-GDGOC/GDGoC-Community-WEBSITE/pull/18) covers event administration and check-in workflows, alongside creative frontend work. [Visit the website](https://gdgoc-community-website.vercel.app).
 
 <sub>React · TypeScript · Three.js · Express · MongoDB</sub>
 
-### [BloodBond](https://github.com/akaKRISH/BloodBond)
+### [05 · BloodBond](https://github.com/akaKRISH/BloodBond)
+
+<a href="https://akakrish.github.io/BloodBond/"><img src="assets/profile/bloodbond-preview.jpg" alt="Actual BloodBond prototype preview; displayed donor information is sample data, not a verified live network" width="1200"></a>
 
 **A simpler way to search for a donor.** A prototype exploring compatibility, availability, and distance-based matching. The [public preview](https://akakrish.github.io/BloodBond/) uses sample data, not a live donor service.
 
 <sub>JavaScript · FastAPI · SQLAlchemy · Python</sub>
 
-<details>
-<summary>A look at the actual interfaces</summary>
-
-**GDGoC Community Website** · Public website capture
-
-<a href="https://gdgoc-community-website.vercel.app"><img src="assets/profile/gdgoc-preview.jpg" alt="Actual GDGoC community website: Learn, Connect, Grow, with the community mascot and event navigation" width="900"></a>
-
-**BloodBond** · Prototype capture with sample data
-
-<a href="https://akakrish.github.io/BloodBond/"><img src="assets/profile/bloodbond-preview.jpg" alt="Actual BloodBond prototype preview; displayed donor information is sample data, not a verified live network" width="900"></a>
-
-</details>
-
 ## Tools I Reach For
 
-| Area | Working with |
-| :--- | :--- |
-| Programming | Python, Java, JavaScript, TypeScript |
-| Frontend | React, Tailwind CSS, Vite, Motion, Three.js |
-| Backend | Node.js, Express, FastAPI, SQLAlchemy |
-| Local AI & vision | OpenCV, MediaPipe, Ollama, local model integration |
-| Engineering | Git, GitHub Actions, Docker, pytest |
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/toolkit-mobile.svg">
+  <img src="assets/profile/toolkit.svg" alt="A working toolkit. Languages: Python, Java, JavaScript, TypeScript. Creative web: React, Tailwind CSS, Vite, Motion, Three.js. Backend: Node.js, Express, FastAPI, SQLAlchemy. AI and vision: OpenCV, MediaPipe, Ollama. Ship and verify: Git, GitHub Actions, Docker, pytest." width="1200">
+</picture>
 
 I'm building fluency through the projects above and [algorithm practice](https://github.com/akaKRISH/LeetCode).
 
-## Away From the Editor
+## Contribution Field
 
-Sprinting gets me out of my head. Psychology, history, and strategy tend to pull me back in. Philosophy keeps me asking which questions are worth the effort, and Krishna's teachings remind me to focus on the work in front of me.
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/contribution-field-mobile.svg">
+  <img src="assets/profile/contribution-field.svg" alt="Contribution field. The work, over time. Real contributions, seen from a different angle." width="1200">
+</picture>
 
-<details>
-<summary>A little activity, not a scoreboard</summary>
-
-These self-hosted graphics are generated from GitHub data. Language share measures repository code size, not expertise.
-
-<img src="assets/activity/github-overview.svg" alt="GitHub activity summary with its generation date" width="420">
-
-<img src="assets/activity/github-languages.svg" alt="Languages in public repositories by code size, not a measure of proficiency" width="420">
+### A trail of things tried.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/snake/github-contribution-grid-snake-dark.svg">
@@ -91,7 +101,23 @@ These self-hosted graphics are generated from GitHub data. Language share measur
   <img src="assets/snake/github-contribution-grid-snake-dark.svg" alt="Animated snake tracing my contribution grid" width="100%">
 </picture>
 
-</details>
+### The same work. Another dimension.
+
+<a href="https://akakrish.github.io/akaKRISH/interactive/">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/3d/profile-night-rainbow-static.svg">
+    <img src="assets/3d/profile-night-rainbow.svg" alt="My real generated GitHub contribution field in three dimensions, with an animated rainbow across its activity blocks" width="1200">
+  </picture>
+</a>
+
+[Explore the interactive contribution field](https://akakrish.github.io/akaKRISH/interactive/)
+
+<p>
+  <img src="assets/activity/github-overview.svg" alt="GitHub activity summary with its generation date" width="400">
+  <img src="assets/activity/github-languages.svg" alt="Languages in public repositories by code size, not a measure of proficiency" width="400">
+</p>
+
+Real GitHub data, refreshed by Actions. The language card measures repository code size, not expertise; the 3D chart groups commits by repository language. Each graphic carries its own snapshot date.
 
 <details>
 <summary>The original artwork still has a home</summary>
@@ -100,11 +126,20 @@ The [layered Ruru illustration](character/ruru.svg) is hand-authored work from a
 
 <a href="https://akakrish.github.io/akaKRISH/interactive/character/"><img src="character/ruru.svg" alt="Original layered illustration of Ruru, with glasses, a checked shirt, and a split illuminated ring" width="240"></a>
 
-[Explore the character study](https://akakrish.github.io/akaKRISH/interactive/character/) &nbsp; · &nbsp; [Explore the contribution field](https://akakrish.github.io/akaKRISH/interactive/)
-
-<a href="https://akakrish.github.io/akaKRISH/interactive/"><img src="assets/3d/profile-night-green.svg" alt="Original three-dimensional contribution-field illustration" width="100%"></a>
+[Explore the character study](https://akakrish.github.io/akaKRISH/interactive/character/)
 
 </details>
+
+## Away From the Editor
+
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/profile/offscreen-mobile.svg">
+  <img src="assets/profile/offscreen.svg" alt="Away from the editor. Fast feet. Restless mind. A running-track study connects sprinting with curiosity." width="1200">
+</picture>
+
+Sprinting gets me out of my head. Psychology, history, and strategy tend to pull me back in. Philosophy keeps me asking which questions are worth the effort, and Krishna's teachings remind me to focus on the work in front of me.
+
+<img src="assets/profile/quiet.svg" alt="A quieter thought to close" width="1200">
 
 <br>
 

@@ -13,6 +13,10 @@ on:
       - scripts/generate_activity.py
       - scripts/test_activity.py
       - scripts/test_snake.py
+      - scripts/test_showcase.py
+      - scripts/render_showcase.py
+      - scripts/render_toolkit.py
+      - scripts/freeze_contributions.py
       - .github/workflows/**
   push:
     branches: [main]
@@ -21,6 +25,9 @@ on:
       - assets/**
       - scripts/validate_profile.py
       - scripts/generate_activity.py
+      - scripts/render_showcase.py
+      - scripts/render_toolkit.py
+      - scripts/freeze_contributions.py
       - scripts/test_*.py
       - .github/workflows/**
   workflow_dispatch:

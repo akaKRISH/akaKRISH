@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="toolkit-desktop-title toolkit-desktop-desc" font-family="Arial,sans-serif" letter-spacing="0">
+  <title id="toolkit-desktop-title">A working toolkit.</title>
+  <desc id="toolkit-desktop-desc">Twenty technologies grouped into languages, creative web, backend, AI and vision, and shipping and verification. No proficiency ratings.</desc>
+  <style>.field-trace{animation:field-drift 24s linear infinite}@keyframes field-drift{to{stroke-dashoffset:-192}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+  <rect width="1200" height="680" fill="#0B0A11" />
+  <g aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M76 176V187M76 246V401L105 430H335L362 403" stroke="#BEB4CB" stroke-opacity="0.17" stroke-width="1.4" />
+    <path d="M337 216H370L402 184" stroke="#BEB4CB" stroke-opacity="0.17" stroke-width="1.4" />
+    <path d="M691 211H844L896 263" stroke="#BEB4CB" stroke-opacity="0.17" stroke-width="1.4" />
+    <path d="M492 396H548L580 428V453" stroke="#BEB4CB" stroke-opacity="0.17" stroke-width="1.4" />
+    <path d="M954 455H879L850 484" stroke="#BEB4CB" stroke-opacity="0.17" stroke-width="1.4" />
+    <path d="M1018 566L1080 498L1142 560L1082 620" stroke="#BEB4CB" stroke-opacity="0.17" stroke-width="1.4" />
+    <path d="M691 211H844L896 263" stroke="#8B5CF6" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="8 40" class="field-trace" />
+    <path d="M1000 57H1143L1103 97H1048Z" stroke="#8B5CF6" stroke-opacity="0.65" stroke-width="1.5" />
+    <path d="M1048 97 1026 119H1122L1143 97" stroke="#F44984" stroke-opacity="0.5" stroke-width="1.5" />
+  </g>
+  <text x="56" y="108" font-size="78" fill="#F5F0ED" font-weight="400">A working <tspan font-family="Georgia,serif" font-style="italic" font-size="86">toolkit.</tspan>
+  </text>
+  <g role="group" aria-label="LANGUAGES" data-group="LANGUAGES">
+    <g transform="translate(76 214) scale(1)" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linejoin="miter" aria-hidden="true">
+      <path d="M-21-15 0-26 21-15 0-4Z" />
+      <path d="M-21-1 0 10 21-1" />
+      <path d="M-21 13 0 24 21 13" />
+    </g>
+    <text x="116" y="230" font-size="26" fill="#8B5CF6" font-weight="600">LANGUAGES</text>
+    <text x="116" y="282" font-size="30" fill="#F5F0ED" data-technology="Python">Python</text>
+    <text x="270" y="282" font-size="30" fill="#F5F0ED" data-technology="Java">Java</text>
+    <text x="116" y="326" font-size="30" fill="#F5F0ED" data-technology="JavaScript">JavaScript</text>
+    <text x="116" y="370" font-size="30" fill="#F5F0ED" data-technology="TypeScript">TypeScript</text>
+  </g>
+  <g role="group" aria-label="CREATIVE WEB" data-group="CREATIVE WEB">
+    <g transform="translate(425 202) scale(1)" fill="none" stroke="#F44984" stroke-width="1.8" stroke-linejoin="miter" aria-hidden="true">
+      <path d="M-24-8 0-22 24-8 0 6Z" />
+      <path d="M-24 7 0 21 24 7" />
+      <path d="M-24-8V7M24-8V7M0 6V21" />
+    </g>
+    <text x="465" y="218" font-size="26" fill="#F44984" font-weight="600">CREATIVE WEB</text>
+    <text x="465" y="270" font-size="30" fill="#F5F0ED" data-technology="React">React</text>
+    <text x="633" y="270" font-size="30" fill="#F5F0ED" data-technology="Tailwind CSS">Tailwind CSS</text>
+    <text x="465" y="314" font-size="30" fill="#F5F0ED" data-technology="Vite">Vite</text>
+    <text x="610" y="314" font-size="30" fill="#F5F0ED" data-technology="Motion">Motion</text>
+    <text x="465" y="358" font-size="30" fill="#F5F0ED" data-technology="Three.js">Three.js</text>
+  </g>
+  <g role="group" aria-label="BACKEND" data-group="BACKEND">
+    <g transform="translate(76 485) scale(1)" fill="none" stroke="#FF865A" stroke-width="1.8" stroke-linejoin="miter" aria-hidden="true">
+      <path d="M-24-18H13L25-6V17H-12L-24 5Z" />
+      <path d="M-24-18-12-6H25M-12-6V17" />
+      <path d="M0 6H13" />
+    </g>
+    <text x="116" y="501" font-size="26" fill="#FF865A" font-weight="600">BACKEND</text>
+    <text x="116" y="553" font-size="30" fill="#F5F0ED" data-technology="Node.js">Node.js</text>
+    <text x="288" y="553" font-size="30" fill="#F5F0ED" data-technology="Express">Express</text>
+    <text x="116" y="597" font-size="30" fill="#F5F0ED" data-technology="FastAPI">FastAPI</text>
+    <text x="288" y="597" font-size="30" fill="#F5F0ED" data-technology="SQLAlchemy">SQLAlchemy</text>
+  </g>
+  <g role="group" aria-label="AI &amp; VISION" data-group="AI &amp; VISION">
+    <g transform="translate(928 274) scale(1)" fill="none" stroke="#C9AE78" stroke-width="1.8" stroke-linejoin="miter" aria-hidden="true">
+      <path d="M-23-6V-22H-7M7-22H23V-6M23 7V23H7M-7 23H-23V7" />
+      <path d="M-12 0 0-12 12 0 0 12Z" />
+    </g>
+    <text x="968" y="290" font-size="26" fill="#C9AE78" font-weight="600">AI &amp; VISION</text>
+    <text x="968" y="342" font-size="30" fill="#F5F0ED" data-technology="OpenCV">OpenCV</text>
+    <text x="968" y="386" font-size="30" fill="#F5F0ED" data-technology="MediaPipe">MediaPipe</text>
+    <text x="968" y="430" font-size="30" fill="#F5F0ED" data-technology="Ollama">Ollama</text>
+  </g>
+  <g role="group" aria-label="SHIP &amp; VERIFY" data-group="SHIP &amp; VERIFY">
+    <g transform="translate(600 489) scale(1)" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linejoin="miter" aria-hidden="true">
+      <path d="M-23 8-8 23 24-20" />
+      <path d="M-23-10H-8M7 24H24V7" />
+    </g>
+    <text x="640" y="505" font-size="26" fill="#8B5CF6" font-weight="600">SHIP &amp; VERIFY</text>
+    <text x="640" y="557" font-size="30" fill="#F5F0ED" data-technology="Git">Git</text>
+    <text x="754" y="557" font-size="30" fill="#F5F0ED" data-technology="GitHub Actions">GitHub Actions</text>
+    <text x="640" y="601" font-size="30" fill="#F5F0ED" data-technology="Docker">Docker</text>
+    <text x="820" y="601" font-size="30" fill="#F5F0ED" data-technology="pytest">pytest</text>
+  </g>
+</svg>
