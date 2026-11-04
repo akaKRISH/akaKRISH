@@ -64,6 +64,21 @@ try {
   assert.deepEqual(failures,[]);
   console.log("PASS: GitHub-sanitized HTML; desktop/mobile light/dark; all images; reduced motion; mobile Sanskrit; one-shot browser playback; collapsed/expanded layouts");
 
+  for(const suffix of ["", "-dark"]){
+    await page.emulateMedia({reducedMotion:"reduce"});
+    await page.goto(`https://profile-preview.invalid/assets/snake/github-contribution-grid-snake${suffix}.svg`,{waitUntil:"networkidle"});
+    assert.equal(await page.evaluate(()=>document.getAnimations().length),0,"Snake ignores reduced motion");
+    const still=await page.screenshot();
+    await page.waitForTimeout(500);
+    assert(still.equals(await page.screenshot()),"Reduced-motion snake still moves");
+    await page.emulateMedia({reducedMotion:"no-preference"});
+    assert(await page.evaluate(()=>document.getAnimations().length>0),"Snake animations are missing");
+    const moving=await page.screenshot();
+    await page.waitForTimeout(500);
+    assert(!moving.equals(await page.screenshot()),"Snake does not animate normally");
+  }
+  console.log("PASS: both snake SVGs freeze for reduced motion and animate normally otherwise");
+
   if(process.argv.includes("--github")){
     const url="https://github.com/akaKRISH/akaKRISH/tree/codex/profile-origin";
     for(const width of [1280,375]){

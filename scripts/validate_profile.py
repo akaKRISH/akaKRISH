@@ -1,11 +1,37 @@
 """Offline checks for README paths, safe SVGs, and the one-shot portrait asset."""
+import argparse
 from html.parser import HTMLParser
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
-from PIL import Image, ImageChops, ImageStat
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def validate_snakes(root=ROOT):
+    normalized = []
+    for suffix, snake_color in [("", "#8B5CF6"), ("-dark", "#F5F0ED")]:
+        path = root / f"assets/snake/github-contribution-grid-snake{suffix}.svg"
+        text = path.read_text(encoding="utf-8")
+        assert not re.search(r"(?m)^(?:<{7}|={7}|>{7})(?: |$)", text), f"Conflict marker: {path.name}"
+        tree = ET.fromstring(text)
+        assert tree.tag == "{http://www.w3.org/2000/svg}svg", f"Not an SVG: {path.name}"
+        style = tree.find("{http://www.w3.org/2000/svg}style")
+        assert style is not None and style.text, f"Missing snake animation styles: {path.name}"
+        expected = dict(zip(
+            ["cb", "cs", "ce", "c0", "c1", "c2", "c3", "c4"],
+            ["#F5F0ED26", snake_color, "#0B0A11", "#0B0A11", "#8B5CF6", "#F44984", "#FF865A", "#C9AE78"],
+        ))
+        properties = re.findall(r"--([a-z0-9]+):([^;}]+)", style.text)
+        assert len(properties) == len(expected) and dict(properties) == expected, f"Snake palette mismatch: {path.name}"
+        keyframes = set(re.findall(r"@keyframes\s+([\w-]+)", style.text))
+        animations = set(re.findall(r"animation-name:([\w-]+)", style.text))
+        assert animations and animations <= keyframes, f"Broken animation references: {path.name}"
+        assert "transform:translate(" in style.text, f"Missing snake movement: {path.name}"
+        assert "@media(prefers-reduced-motion:reduce){*{animation:none!important}}" in style.text, f"Missing reduced-motion override: {path.name}"
+        style.text = re.sub(r"--cs:[^;}]+", "--cs:SNAKE", style.text)
+        normalized.append(ET.tostring(tree))
+    assert normalized[0] == normalized[1], "Light/dark snakes have different grids or animations"
 
 
 class Assets(HTMLParser):
@@ -33,6 +59,9 @@ class Assets(HTMLParser):
 
 
 def validate():
+    from PIL import Image, ImageChops, ImageStat
+
+    validate_snakes()
     text = (ROOT / "README.md").read_text(encoding="utf-8")
     assets = Assets()
     assets.feed(text)
@@ -89,4 +118,10 @@ def validate():
 
 
 if __name__ == "__main__":
-    validate()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--snake-only", action="store_true", help="Validate generated snake outputs without Pillow")
+    if parser.parse_args().snake_only:
+        validate_snakes()
+        print("PASS: both snake palettes, animation references, and matching grids")
+    else:
+        validate()
