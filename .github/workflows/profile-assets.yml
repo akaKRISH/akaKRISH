@@ -1,0 +1,44 @@
+name: Validate profile README assets
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - assets/**
+      - character/ruru.svg
+      - scripts/validate_profile.py
+      - scripts/render_profile.mjs
+      - scripts/encode_profile_gif.py
+      - scripts/preview_profile.mjs
+      - scripts/generate_activity.py
+      - scripts/test_activity.py
+      - scripts/test_snake.py
+      - .github/workflows/**
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - assets/**
+      - scripts/validate_profile.py
+      - scripts/generate_activity.py
+      - scripts/test_*.py
+      - .github/workflows/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install asset validation dependency
+        run: python -m pip install Pillow==12.3.0
+      - name: Validate README and local graphics
+        run: python scripts/validate_profile.py
+      - name: Test activity rendering and snake regressions
+        run: python -m unittest discover -s scripts -p "test_*.py"

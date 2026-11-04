@@ -8,22 +8,48 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-generated-assets-${{ github.ref }}
+  cancel-in-progress: false
+  queue: max
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - name: Generate snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/snake/github-contribution-grid-snake.svg?color_snake=%2378c4ff&color_dots=%23161b22%2C%231d4ed8%2C%234f46e5%2C%237c3aed%2C%23a78bfa
-            assets/snake/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2378c4ff
+            assets/snake/github-contribution-grid-snake.svg?color_snake=%238B5CF6&color_dots=%230B0A11%2C%238B5CF6%2C%23F44984%2C%23FF865A%2C%23C9AE78
+            assets/snake/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23F5F0ED&color_dots=%230B0A11%2C%238B5CF6%2C%23F44984%2C%23FF865A%2C%23C9AE78
+
+      - name: Match grid borders and respect reduced motion
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          for path in Path("assets/snake").glob("*.svg"):
+              svg = path.read_text(encoding="utf-8")
+              svg, count = re.subn(r"(?<=--cb:)[^;}]+", "#F5F0ED26", svg, count=1)
+              assert count == 1 and svg.count("</style>") == 1, f"Unexpected SVG structure: {path}"
+              reduced_motion = "@media(prefers-reduced-motion:reduce){*{animation:none!important}}"
+              if reduced_motion not in svg:
+                  svg = svg.replace("</style>", reduced_motion + "</style>", 1)
+              path.write_text(svg, encoding="utf-8")
+          PY
+
+      - name: Validate generated palettes and animations
+        run: python scripts/validate_profile.py --snake-only
 
       - name: Commit generated assets
+        if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
