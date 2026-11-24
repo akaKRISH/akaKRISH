@@ -6,21 +6,21 @@
   <text x="396" y="34" fill="#F5F0ED" font-size="11" text-anchor="end" opacity="0.7">@akaKRISH</text>
   <line x1="24" y1="87" x2="396" y2="87" stroke="#F5F0ED" stroke-opacity="0.14" />
   <line x1="24" y1="316" x2="396" y2="316" stroke="#F5F0ED" stroke-opacity="0.14" />
-  <text x="24" y="339" fill="#F5F0ED" font-size="10" opacity="0.65">Generated 23 Nov 2026, 16:54 UTC</text>
+  <text x="24" y="339" fill="#F5F0ED" font-size="10" opacity="0.65">Generated 24 Nov 2026, 16:44 UTC</text>
   <text x="24" y="57" fill="#F5F0ED" font-size="12" opacity="0.8">Code bytes, not proficiency</text>
   <text x="24" y="75" fill="#F5F0ED" font-size="10" opacity="0.6">All 16 owned public repositories; includes forks</text>
-  <rect x="24.000000" y="107" width="169.317218" height="8" fill="#F44984" opacity="1" />
-  <rect x="193.317218" y="107" width="124.073197" height="8" fill="#8B5CF6" opacity="1" />
-  <rect x="317.390415" y="107" width="30.584377" height="8" fill="#FF865A" opacity="1" />
-  <rect x="347.974792" y="107" width="25.972799" height="8" fill="#C9AE78" opacity="1" />
-  <rect x="373.947592" y="107" width="19.234815" height="8" fill="#F5F0ED" opacity="1" />
-  <rect x="393.182406" y="107" width="2.817594" height="8" fill="#F5F0ED" opacity="0.45" />
+  <rect x="24.000000" y="107" width="169.284957" height="8" fill="#F44984" opacity="1" />
+  <rect x="193.284957" y="107" width="124.049557" height="8" fill="#8B5CF6" opacity="1" />
+  <rect x="317.334514" y="107" width="30.578550" height="8" fill="#FF865A" opacity="1" />
+  <rect x="347.913063" y="107" width="25.967850" height="8" fill="#C9AE78" opacity="1" />
+  <rect x="373.880914" y="107" width="19.231150" height="8" fill="#F5F0ED" opacity="1" />
+  <rect x="393.112064" y="107" width="2.887936" height="8" fill="#F5F0ED" opacity="0.45" />
   <rect x="24" y="139" width="7" height="7" rx="2" fill="#F44984" opacity="1" />
   <text x="42" y="147" fill="#F5F0ED" font-size="12">Python</text>
   <text x="396" y="147" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">2,204,446 B (45.5%)</text>
   <rect x="24" y="166" width="7" height="7" rx="2" fill="#8B5CF6" opacity="1" />
   <text x="42" y="174" fill="#F5F0ED" font-size="12">TypeScript</text>
-  <text x="396" y="174" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">1,615,386 B (33.4%)</text>
+  <text x="396" y="174" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">1,615,386 B (33.3%)</text>
   <rect x="24" y="193" width="7" height="7" rx="2" fill="#FF865A" opacity="1" />
   <text x="42" y="201" fill="#F5F0ED" font-size="12">HTML</text>
   <text x="396" y="201" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">398,197 B (8.2%)</text>
@@ -32,5 +32,5 @@
   <text x="396" y="255" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">250,430 B (5.2%)</text>
   <rect x="24" y="274" width="7" height="7" rx="2" fill="#F5F0ED" opacity="0.45" />
   <text x="42" y="282" fill="#F5F0ED" font-size="12">Other languages</text>
-  <text x="396" y="282" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">36,684 B (0.8%)</text>
+  <text x="396" y="282" fill="#F5F0ED" font-size="10" text-anchor="end" opacity="0.7">37,607 B (0.8%)</text>
 </svg>
